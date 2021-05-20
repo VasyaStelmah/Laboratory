@@ -1,0 +1,30 @@
+body {
+  padding: 20px 35px;
+}
+
+#ol {
+  background-color: burlywood;
+}
+
+#div {
+  background-color: beige;
+}
+
+h2 {
+  justify-content: center;
+  display: flex;
+}
+
+.big {
+  background: #ccc;
+  height: 300px;
+}
+
+.btn {
+  font-size: 14px;
+}
+
+.box {
+  background: lightgreen;
+  height: 40px;
+}
