@@ -1,119 +1,117 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="./reset.css" type="text/css" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h2>Selecting elements</h2>
+    <h2>Traversing elements</h2>
+    <h2>Manipulating elements</h2>
 
-<head>
-  <style>
-    #ol {
-      background-color: burlywood;
-    }
+    <h3>createElement, before, after, prepend append</h3>
 
-    #div {
-      background-color: beige;
-    }
+    <ol id="ol">
+      <li>0</li>
+      <li>1</li>
+      <li>2</li>
+    </ol>
 
-    h2 {
-      justify-content: center;
-      display: flex;
-    }
+    <h3>insertAdjacentHTML</h3>
 
-    .big {
-      background: #ccc;
-      height: 300px;
-    }
+    <ol id="div">
+      <li>0</li>
+      <li>1</li>
+      <li>2</li>
+    </ol>
 
-    .btn {
-      font-size: 14px;
-    }
+    <p id="p_inner_HTML"></p>
 
-    .box {
-      background: lightgreen;
-      height: 40px;
-    }
-  </style>
-  <title>DOM</title>
-</head>
+    <div id="parentElement">
+      <span id="childElement">foo bar</span>
+    </div>
 
-<body>
-  <h2>Selecting elements</h2>
+    <h2>Working with Attributes</h2>
 
-  <h2>Traversing elements</h2>
+    <input id="input" type="checkbox" checked />
 
-  <h2>Manipulating elements</h2>
-  <h3>createElement, before, after, prepend append</h3>
-  <ol id="ol">
-    <li>0</li>
-    <li>1</li>
-    <li>2</li>
-  </ol>
-  <h3>
-    insertAdjacentHTML
-  </h3>
-  <ol id="div">
-    <li>0</li>
-    <li>1</li>
-    <li>2</li>
-  </ol>
-  <p id="p_inner_HTML"></p>
-  <div id="parentElement">
-    <span id="childElement">foo bar</span>
-  </div>
-  <h2>Working with Attributes</h2>
-  <input id="input" type="checkbox" checked>
+    <h2>Manipulating Element’s Styles</h2>
 
-  <h2>Manipulating Element’s Styles</h2>
+    <div id="ManipulatingStyles">className и classList</div>
 
-  <div id="ManipulatingStyles">className и classList</div>
+    <h2>Working with Events</h2>
 
-  <h2>Working with Events</h2>
-  <div>Правый клик на этой кнопке выведет "Клик".</div>
-  <button oncontextmenu="alert('Клик!');">Правый клик сюда</button>
-  <input onkeydown="return checkPhoneKey(event.key)" placeholder="Введите телефон" type="tel">
+    <div>Правый клик на этой кнопке выведет "Клик".</div>
 
-  <button type="button" class="btn">Нажми на меня</button>
+    <button oncontextmenu="alert('Клик!');">Правый клик сюда</button>
 
-  <div class="big"></div>
+    <input
+      onkeydown="return checkPhoneKey(event.key)"
+      placeholder="Введите телефон"
+      type="tel"
+    />
 
-  <div id="box" class="box">Скрытый элемент</div>
+    <button type="button" class="btn">Нажми на меня</button>
 
-  Ваш email: <input type="email" id="inputOnfocus">
+    <div class="big"></div>
 
-  <h3>What is Event Delegation?</h3>
-  <p>A way yuo can an event listener once for multiple elements with support for adding extra children.</p>
-  <ul id="myList">
-    <li>Apple</li>
-    <li>Banana</li>
-    <li>Tomato</li>
-  </ul>
+    <div id="box" class="box">Скрытый элемент</div>
 
+    Ваш email: <input type="email" id="inputOnfocus" />
 
-  <h2>Scripting Web Forms</h2>
-  <form onsubmit="alert('submit!');return false">
-    <fieldset>
-      Первый пример: нажмите Enter: <input type="text" value="Текст"><br>
-      Второй пример: нажмите на кнопку "Отправить": <input type="submit" value="Отправить">
-      <div>Email:<input type="email">
-        Password:<input type="password"></div>
-    </fieldset>
-  </form>
-  <p>Тег select позволяет создать элемент интерфейса в виде раскрывающегося списка</p>
-  <select id="select">
-    <option value="apple">Яблоко</option>
-    <option value="pear">Груша</option>
-    <option value="banana">Банан</option>
-  </select>
-  <div>
-    <p>Флажки. Позволяют выбрать более одного варианта из предложенных.</p>
-    <input type="checkbox" name="checkbox" value="checkbox">"Пиво"
-    <input type="checkbox" name="checkbox" value="checkbox">"Чай"
-    <input type="checkbox" name="checkbox" value="checkbox">"Кофе"
-  </div>
-  <div>
-    <p>Переключатели. Используются, когда следует выбрать один вариант из нескольких предложенных.</p>
-    <input type="radio" name="radiobutton" value="radiobutton">"Пиво"
-    <input type="radio" name="radiobutton" value="radiobutton">"Чай"
-    <input type="radio" name="radiobutton" value="radiobutton">"Кофе"
-  </div>
-  <script src="./dom.js"></script>
-</body>
+    <h3>What is Event Delegation?</h3>
 
+    <p>
+      A way yuo can an event listener once for multiple elements with support
+      for adding extra children.
+    </p>
+    <ul id="myList">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Tomato</li>
+    </ul>
+
+    <h2>Scripting Web Forms</h2>
+
+    <form onsubmit="alert('submit!');return false">
+      <fieldset>
+        Первый пример: нажмите Enter: <input type="text" value="Текст" /><br />
+        Второй пример: нажмите на кнопку "Отправить":
+        <input type="submit" value="Отправить" />
+        <div>
+          Email:<input type="email" /> Password:<input type="password" />
+        </div>
+      </fieldset>
+    </form>
+
+    <p>
+      Тег select позволяет создать элемент интерфейса в виде раскрывающегося
+      списка
+    </p>
+    <select id="select">
+      <option value="apple">Яблоко</option>
+      <option value="pear">Груша</option>
+      <option value="banana">Банан</option>
+    </select>
+
+    <div>
+      <p>Флажки. Позволяют выбрать более одного варианта из предложенных.</p>
+      <input type="checkbox" name="checkbox" value="checkbox" />"Пиво"
+      <input type="checkbox" name="checkbox" value="checkbox" />"Чай"
+      <input type="checkbox" name="checkbox" value="checkbox" />"Кофе"
+    </div>
+
+    <div>
+      <p>
+        Переключатели. Используются, когда следует выбрать один вариант из
+        нескольких предложенных.
+      </p>
+      <input type="radio" name="radiobutton" value="radiobutton" />"Пиво"
+      <input type="radio" name="radiobutton" value="radiobutton" />"Чай"
+      <input type="radio" name="radiobutton" value="radiobutton" />"Кофе"
+    </div>
+
+    <script src="./dom.js"></script>
+  </body>
 </html>

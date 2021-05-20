@@ -56,6 +56,7 @@
 - Popup Alert / Promt
 - Timing
 - Cookies
+- Methods alert() / prompt() / confirm()
 
 ---
 
@@ -110,6 +111,7 @@
 - Unit testing basics
 - Dev tools
 - What is agile
+- Something went wrong? Troubleshooting JavaScript errors
 
 ### Frameworks
 
