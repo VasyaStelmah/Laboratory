@@ -104,7 +104,7 @@
 
 ### Additionally
 
-##### The list of useful methods for works with DOM and some notes about DOM:
+##### The list of useful methods (with simple examples) for works with DOM and some notes about DOM:
 
     - document.getElementById()
     - document.getElementsByTagName()
@@ -159,3 +159,7 @@
 | Text          | 3        |
 | Comment       | 8        |
 | Document      | 9        |
+
+
+- [Main Differences with some methods](https://stackoverflow.com/questions/14377590/queryselector-and-queryselectorall-vs-getelementsbyclassname-and-getelementbyid)
+- [querySelectorAll vs getElements](https://dev.to/jasterix/queryselectorall-vs-getelements-2mnf)
