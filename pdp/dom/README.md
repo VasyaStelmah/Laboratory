@@ -104,55 +104,58 @@
 
 ### Additionally
 
-##### The list of methods for works with DOM and some notes about DOM:
+##### The list of useful methods for works with DOM and some notes about DOM:
 
-- document.getElementById()
-- document.getElementsByTagName()
-- document.getElementsByClassName()
-- document.querySelector()
-- document.querySelectorAll()
+    - document.getElementById()
+    - document.getElementsByTagName()
+    - document.getElementsByClassName()
+    - document.querySelector()
+    - document.querySelectorAll()
 
-- document.getElementsByTagName()
-- document.getElementsByClassName()
-- document.querySelector()
-- document.querySelectorAll()
+    - document.getElementsByTagName()
+    - document.getElementsByClassName()
+    - document.querySelector()
+    - document.querySelectorAll()
 
-* document.getElementsByTagName('p');
-* document.getElementsByClassName("paragraph");
-* document.getElementById('fourth');
-* document.querySelector("p");
-* document.querySelectorAll("p");
-* document.querySelectorAll("div p
-* document.querySelector("#fourth");
-* document.getElementsByTagName('p');
-* document.querySelector("div");
-* document.getElementById('customContent');
-* document.getElementById("main");
-* document.createElement('div');
-* document.getElementById('main');
-* document.getElementById('sixth-part);
-* document.getElementById('textTitle');
-* document.getElementById('custom-three');
-* document.createElement('ul');
-* document.createElement('li');
+    - document.getElementsByTagName('p');
+    - document.getElementsByClassName("paragraph");
+    - document.getElementById('fourth');
+    - document.querySelector("p");
+    - document.querySelectorAll("p");
+    - document.querySelectorAll("div p");
+    - document.querySelector("#fourth");
+    - document.getElementsByTagName('p');
+    - document.querySelector("div");
+    - document.getElementById('customContent');
+    - document.getElementById("main");
+    - document.createElement('div');
+    - document.getElementById('main');
+    - document.getElementById('sixth-part);
+    - document.getElementById('textTitle');
+    - document.getElementById('custom-three');
+    - document.createElement('ul');
+    - document.createElement('li');
 
 <br />
 
-- Providing difference manipulations | предоставление разностных манипуляций:
-- generation and addition of nodes | генерация и добавление узлов
-- obtaining nodes | получение узлов
-- change nodes | изменение узлов
-- changing links between nodes | изменение связей между узлами
-- remove nodes | удаление узлов
+| Providing difference manipulations | предоставление разностных манипуляций |
+| ---------------------------------- | ------------------------------------- |
+| generation and addition of nodes   | генерация и добавление узлов          |
+| obtaining nodes                    | получение узлов                       |
+| change nodes                       | изменение узлов                       |
+| changing links between nodes       | изменение связей между узлами         |
+| remove nodes                       | удаление узлов                        |
 
 <br />
 
 - nodeType
 - The nodeType property returns the type of node. nodeType is read only.
 - The most important node types are:
-- | Element type | NodeType |
-- | Element | 1 |
-- | Attribute | 2 |
-- | Text | 3 |
-- | Comment | 8 |
-- | Document | 9 |
+
+| Element type  | NodeType |
+|---------------|----------|
+| Element       | 1        |
+| Attribute     | 2        |
+| Text          | 3        |
+| Comment       | 8        |
+| Document      | 9        |
