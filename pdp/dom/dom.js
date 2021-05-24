@@ -2,236 +2,185 @@
 // elements — это живая NodeList коллекция.
 // То есть, она автоматически обновляется, когда элементы с таким же name добавляются/удаляются из документа.
 // name — это значение поля  name элемента(элементов).
-
-let divById = document.getElementById("playground");
+let playground = document.getElementById("playground");
 let up = document.getElementsByName("up");
-let h1 = document.getElementsByTagName("h1");
-let pByClassName = document.getElementsByClassName("text");
-let div = document.querySelector("#playground");
-let p = document.querySelectorAll(".text");
-
+let h4 = document.getElementsByTagName("h4");
+let textSpan = document.getElementsByClassName("textSpan");
+let querySelectorById = document.querySelector("#querySelectorById");
+let textQuerySelectorAll = document.querySelectorAll(".textQuerySelectorAll");
 // в комментариях указаны текущие результаты
 const resultsTask1 = {
-  divById, // null
-  up, // NodeList []
-  h1, // HTMLCollection []
-  pByClassName, // HTMLCollection []
-  div, // null
-  p, // NodeList []
+  h4, // HTMLCollection [h4]
+  playground, // div#playground
+  querySelectorById, // div#querySelectorById
+  textQuerySelectorAll, // NodeList(2) [p.textQuerySelectorAll, p.textQuerySelectorAll]
+  textSpan, // HTMLCollection [span.textSpan]
+  up, // NodeList [input]
 };
-
-// console.log("resultsTask1 >", resultsTask1);
-
-// =========================
-// TODO / Исправить
-// Привести в порядок структуру дома (добавить необходимые селекторы, id, classNames) в html документе,
-// чтобы инструкции, описанные выше, были в рабочем состоянии (не возвращали null или пустые массивы/коллекции)
-// =========================
-
+console.log("resultsTask1 >", resultsTask1);
 // ----------- Traversing elements ------------
 // Доступ к DOM начинается с объекта document. Из него можно добраться до любых узлов.
-for (var i = 0; i < document.body.childNodes.length; i++) {
-  let resultsTask2 = document.body.childNodes[i];
-
-  // console.log("resultsTask2 >", { resultsTask2 });
+let array = [];
+for (let i = 0; i < document.body.childNodes.length; i++) {
+  array.push(document.body.childNodes[i].nodeName);
 }
-
-// =========================
-// TODO / Исправить
-// 1. Заменить 'var' на 'let', объяснить разницу между этими способами объявления переменных
-// 2. Вывести в консоли список/коллекцию только уникальных нод для body, для текущей структуры документа (после правок по первой задаче)
-// =========================
-
-// =========================
-// TODO / Исправить
-// 1. Заменить 'var' на 'let', объяснить разницу между этими способами объявления переменных
-// 2. Вывести в консоли список/коллекцию только уникальных нод для body, для текущей структуры документа (после правок по первой задаче)
-// =========================
-
+function unique(array) {
+  let result = [];
+  for (value of array) {
+    if (!result.includes(value)) {
+      result.push(value);
+    }
+  }
+  return result;
+}
+console.log("resultsTask2 >", unique(array));
+// Свойства firstChild и lastChild обеспечивают быстрый доступ к первому и последнему элементу.
+document.body.childNodes[0] === document.body.firstChild;
+document.body.childNodes[document.body.childNodes.length - 1] ===
+  document.body.lastChild;
+console.log("elem.firstChild", document.body.firstChild);
+console.log("elem.lastChild", document.body.lastChild);
+// let объявляет переменную с блочной областью видимости
+// var объявляет переменную глобально или локально во всей функции, независимо от области блока.
 // ---------- Manipulating elements -------------
-
-ol.before("before"); // вставить строку "before" перед <ol>
-ol.after("after"); // вставить строку "after" после <ol>
-
-let liFirst = document.createElement("li");
-liFirst.innerHTML = "prepend";
-ol.prepend(liFirst); // вставить liFirst в начало <ol>
-
-let liLast = document.createElement("li");
-liLast.innerHTML = "append";
-ol.append(liLast); // вставить liLast в конец <ol>
-
-// elem.insertAdjacentHTML(where, html); // Я закомментировал эту строчку, т.к. дальнейший код не выполняется -> 'Uncaught ReferenceError: elem is not defined', нужно разобраться
-// Первый параметр – это специальное слово, указывающее, куда по отношению к elem производить вставку.
-// Второй параметр – это HTML-строка, которая будет вставлена именно «как HTML».
-
-// =========================
-// TODO / Исправить
-// 1. elem - не определен, исправить ошибку
-// 2. в данном документе часто используется 'innerHTML', есть и другие схожие методы, такие как - 'innerText' и 'textContent'
-// сделать по одной задачи для каждого из упомянутых методов, и определить в чем разница
-// =========================
-
-// div.insertAdjacentHTML("beforebegin", "<p>перед elem.</p>");
-// div.insertAdjacentHTML("afterbegin", "<p>внутрь elem, в самое начало.</p>");
-// div.insertAdjacentHTML("beforeend", "<pвнутрь elem, в конец.</p>");
-// div.insertAdjacentHTML("afterend", "<p>после elem</p>");
-
-// =========================
-// TODO / Исправить
-// Не понятно, что тут происходит, либо код не работает (нужно привести в порядок, сделать рабочим + есть ошибки, тоже поправить)
-// (добавь комменты что делают эти инструкции)
-// Я закомментировал эту реализацию, т.к. дальнейший код не выполняется из за ->
-// 'Uncaught TypeError: Cannot read property 'insertAdjacentHTML' of null', нужно разобраться
-// Ознакомиться с материалом - Troubleshooting JavaScript errors: как работать с ошибками, как их определить и какие ошибки бывают
-// Немного похожая статься тут (нужно поверхностно разобраться) ->
-// https://developer.mozilla.org/ru/docs/Learn/JavaScript/First_steps/What_went_wrong
-// =========================
-
-p_inner_HTML.innerHTML =
-  "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
-
+let createLiElementsPrepend = document.createElement("li");
+createLiElementsPrepend.innerHTML = "prepend-вставить в начало списка <ol>";
+let createLiElementsAppend = document.createElement("li");
+createLiElementsAppend.innerHTML = "append-вставить в конец списка <ol>";
+manipulatingElements.before("before-вставить строку перед <ol>");
+manipulatingElements.prepend(createLiElementsPrepend);
+manipulatingElements.append(createLiElementsAppend);
+manipulatingElements.after("after-вставить строку после <ol>");
+// Метод insertAdjacentHTML позволяет вставлять произвольный HTML в любое место документа, в том числе и между узлами!
+divInsertAdjacentHTML.insertAdjacentHTML(
+  "beforebegin",
+  "<p>beforebegin-перед списком</p>"
+);
+divInsertAdjacentHTML.insertAdjacentHTML(
+  "afterbegin",
+  "<p>afterbegin-внутрь списка, в самое начало.</p>"
+);
+divInsertAdjacentHTML.insertAdjacentHTML(
+  "beforeend",
+  "<p>beforeend-внутрь списка, в конец.</p>"
+);
+divInsertAdjacentHTML.insertAdjacentHTML(
+  "afterend",
+  "<p>afterend-после списка</p>"
+);
+// Свойство innerHTML позволяет получить HTML-содержимое элемента в виде строки.
+// Мы также можем изменять его.
+divInnerHTML.innerHTML = "<strong>innerHTML- изменяет содержимое тега</strong>";
+console.log("divInnerHTML.innerHTML", divInnerHTML.innerHTML);
+// innerText - это свойство, позволяющее задавать или получать текстовое содержимое элемента и его потомков.
+// умеет считывать стили и не возвращает содержимое скрытых элементов
+divInnerText.innerText = "<strong>innerText- изменяет содержимое тега</strong>";
+console.log("divInnerText.innerText", divInnerText.innerText);
+// Свойство textContent предоставляет доступ к тексту внутри элемента за вычетом всех <тегов>.
+divTextContent.textContent =
+  "textContent-Вставляет текст внутри тега не учитывая теги";
+console.log("divTextContent.textContent", divTextContent.textContent);
+// Свойство outerHTML содержит HTML элемента целиком
+divOuterHTML.outerHTML =
+  "<p>outerHTML-Замена тега div на тег p с заменой содержимого</p>";
 // Получаем ссылку на элемент, перед которым мы хотим вставить sp1
-var sp1 = document.createElement("span");
-var sp2 = document.getElementById("childElement");
-
-// Получаем ссылку на родителя sp2
-var parentDiv = sp2.parentNode;
-
-// Вставляем sp1 перед sp2
-parentDiv.insertBefore(sp1, sp2);
-
-const resultsTask3 = {
-  p_inner_HTML,
-  sp1,
-  sp2,
-  parentDiv,
-};
-
-console.log("resultsTask3 >", resultsTask3);
-
-// setTimeout(() => div.remove(), 1000);
-
-// =========================
-// TODO / Исправить
-// Пример не рабочий! Нужно исправить
-// Общий фидбэк по примеру - немного скучный, нужно добавить ему смысла, желательно реализовать что-то подобное на событии onClick какого-либо элемента
-// + добавить комментарий
-// =========================
+let spanCreateElement = document.createElement("span");
+spanCreateElement.innerHTML =
+  "<strong>insertBefore-вставляет елемент перед выбраным элементом</strong>";
+// Вставляем spanCreateElement перед spanChildElement
+parentElement.insertBefore(spanCreateElement, spanChildElement);
 
 // --------- Working with Attributes -------------
-
-// console.log('input.getAttribute("checked")', input.getAttribute("checked"));
-// console.log(
-//   'input.setAttribute("checked", "hidden")',
-//   input.setAttribute("hidden", true)
-// );
-// console.log('input.hasAttribute("hidden")', input.hasAttribute("hidden"));
-// console.log(
-//   'input.removeAttribute("hidden")',
-//   input.removeAttribute("checked")
-// );
-
-// =========================
-// TODO / Исправить
-// трудно читается / я все закомментировал, чтобы не запускалось автоматически и без конца )
-// Желательно присваивать к уникальным переменным функции, чтобы можно было проще вызвать и точнее проверить в консоли, что происходит
-// И подобные примеры желательно тоже делать осмысленно, используя события: MouseEvents/MouseScrollEvent/FocusEvent/InputEvent или Event
-// для того чтобы можно было явно вызвать метод и проверить работоспособность  изменение
-// =========================
-
-// --------- Manipulating Element’s Styles -------------
-
-// Если мы присваиваем что-то elem.className, то это заменяет всю строку с классами.
-// Иногда это то, что нам нужно, но часто мы хотим добавить/удалить один класс.
-ManipulatingStyles.className = "ManipulatingStyles";
-
-// =========================
-// TODO / Исправить
-// Желательно добавить интерактивности, допустим:
-// при клике на этот же элемент, добавляется этот атрибут со свойством
-// при вторичном клике, атрибут со свойством удаляется
-// можно текущую функцию не править, но ниже в комментариях я опишу как улучшить текущую реализацию...
-// =========================
-
-// Методы classList:
-// elem.classList.add/remove("class") // – добавить/удалить класс.
-// elem.classList.toggle("class") // – добавить класс, если его нет, иначе удалить.
-// elem.classList.contains("class") // – проверка наличия класса, возвращает true/false.
-
-// =========================
-// TODO / Исправить
-// код - не рабочий / я все закомментировал
-// если как конспект - то ОК!
-// ниже в комментариях я опишу как исправить текущую реализацию...
-// =========================
-
-ManipulatingStyles.classList.add("addNewClass");
-ManipulatingStyles.classList.remove("ManipulatingStyles");
-ManipulatingStyles.classList.toggle("toggleClass");
-console.log(
-  'ManipulatingStyles.classList.contains("toggleClass")',
-  ManipulatingStyles.classList.contains("toggleClass")
-);
-ManipulatingStyles.style.width = "100px";
-ManipulatingStyles.style.height = "100px";
-ManipulatingStyles.style.backgroundColor = "PaleTurquoise";
-
-// =========================
-// TODO / Исправить
-// как конспект - ОК! , но пользы мало
-//
-// ниже в комментариях я опишу как исправить улучшить данную реализацию, можешь добавить туда пару методов для работы с classList и style-s ...
-// =========================
-
-// --------- Working with Events -------------
-
-// Событие load на объекте window наступает, когда загрузилась вся страница, включая стили, картинки и другие ресурсы.
-// window.onload = function () {
-//   alert("Страница загружена");
-// };
-
-// Когда посетитель покидает страницу, на объекте window генерируется событие unload
-// window.unload = function () {
-//   alert("Страница покидается");
-// };
-
-// window.onbeforeunload = function () {
-//   return false;
-// };
-
-// =========================
-// TODO / Исправить
-// 1. просьба - даже в черновиках, постарайся избегать использование 'alert', сорри, но я пока закомменчу код ((
-// т.к., оч трудно запускать и проверять как и что работает
-// ... немного об alert - При его появлении дальнейшее выполнение кода страницы прекращается до тех пор, пока пользователь не закроет это окно
-// Подробнее можно посмотреть тут (+ инфа про - alert() / prompt() / confirm()) - https://itchief.ru/lessons/javascript/javascript-methods-alert-prompt-confirm
-// 2. Все выше перечисленные методы нужно будет вынести в отдельную функцию - АПИ-Документа, и в нужный момент нужно буде их запустить
-// =========================
-
-function checkPhoneKey(key) {
-  console.log(key);
-  return (
-    (key >= "0" && key <= "9") ||
-    key == "+" ||
-    key == "(" ||
-    key == ")" ||
-    key == "-"
+let divAttribute = document.getElementById("divAttribute");
+function addAttributeHidden() {
+  divAttribute.setAttribute("hidden", true);
+}
+function removeAttributeHidden() {
+  divAttribute.removeAttribute("hidden", true);
+}
+function getAttributeNewAttribute() {
+  console.log(
+    'divAttribute.getAttribute("newAttribute")',
+    divAttribute.getAttribute("newAttribute")
   );
 }
+function hasAttributeNewAttribute() {
+  console.log(
+    'divAttribute.hasAttribute("newAttribute")',
+    divAttribute.hasAttribute("newAttribute")
+  );
+}
+// --------- Manipulating Element’s Styles -------------
+// Если мы присваиваем что-то elem.className, то это заменяет всю строку с классами.
+// Иногда это то, что нам нужно, но часто мы хотим добавить/удалить один класс.
+function addAndRemoveStyles() {
+  let manipulatingStyles = document.getElementById("manipulatingStyles");
+  manipulatingStyles.style.width = "400px";
+  manipulatingStyles.style.height = "100px";
+  manipulatingStyles.style.backgroundColor = "pink";
+  manipulatingStyles.classList.toggle("manipulatingStyles");
+}
+function addStyles() {
+  let addManipulatingStyles = document.getElementById("addManipulatingStyles");
+  addManipulatingStyles.classList.add("manipulatingStyles");
+}
+function removeStyles() {
+  let removeManipulatingStyles = document.getElementById(
+    "removeManipulatingStyles"
+  );
+  removeManipulatingStyles.classList.remove("manipulatingStyles");
+}
+function removeStyles() {
+  let removeManipulatingStyles = document.getElementById(
+    "removeManipulatingStyles"
+  );
+  removeManipulatingStyles.classList.remove("manipulatingStyles");
+}
+function containsStyles() {
+  let containsManipulatingStyles = document.getElementById(
+    "containsManipulatingStyles"
+  );
+  console.log(
+    'containsManipulatingStyles.classList.contains("containsClass");',
+    containsManipulatingStyles.classList.contains("containsClass")
+  );
+  console.log(getComputedStyle(manipulatingStyles)); // Выводит все стили объекта
+}
 
-// =========================
-// TODO / Исправить
-// Функция есть, но нигде не вызывается, очень странные условия...
-// добавь комменты + пару штук вызовов, отметь в комментах что получилось
-// и самое главно, какая у функции цель - если тут основная цель, написать цепочку альтернативных условий - то ок,
-// так и напиши, либо тут есть подвох, тогда тоже опиши его тут?
-// Посмотри и разбери "строгое" и "нестрогое" сравнение, в чем разница/особенность?
-// =========================
-
-// window.addEventListener("scroll", function () {
-//   this.alert("Страница прокручивается");
-// });
+// --------- Working with Events -------------
+// DOMContentLoaded-Браузер полностью загрузил HTML, было построено -дерево, но внешние ресурсы, такие как картинки и стили, могут еще не загружены
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOMContentLoaded");
+});
+// Событие load на объекте window наступает, когда загрузилась вся страница, включая стили, картинки и другие ресурсы.
+window.onload = function (event) {
+  console.log("onload");
+};
+// Когда посетитель покидает страницу, на объекте window генерируется событие unload
+document.addEventListener("unload", (event) => {
+  // При закрытии страницы выводит в консоли, также можно отправлять какие либо данные на сервер
+  console.log("unload");
+});
+window.onbeforeunload = function () {
+  // При выходе с сайта или перезагрузке спрашивает в диалоговом окне разрешение
+  return false;
+};
+function checkPhoneKey(key) {
+  // Функция выводт в input только значения которые могут использоваться при наборе телефона
+  // Пример: +375294657895
+  return (key >= "0" && key <= "9") || key === "+";
+}
+function onContextMenu() {
+  // При клике правой кнопкой мыши
+  console.log("клик правой кнопкой мыши");
+}
+function onClick() {
+  // При при отправки формы вызовется функция
+  console.log("отправка формы");
+}
+window.addEventListener("scroll", function () {
+  console.log("Страница прокручивается");
+});
 
 inputOnfocus.onfocus = function () {
   this.style.backgroundColor = "blue";
@@ -253,41 +202,6 @@ myList.addEventListener("click", function (e) {
   }, 1000);
 });
 
-// <li>new element</li>
-const newLi = document.createElement("li");
-newLi.textContent = "new element";
-myList.appendChild(newLi);
-
-window.onload = function () {
-  setTimeout(() => {
-    target.style.backgroundColor = "blue";
-  }, 1000);
-};
-
-// =========================
-// TODO / Исправить
-// 1. Вынести функцию setTimeout за пределы лексического окружения функции - window.onload
-// 2. Чтобы это были две функции / вторая принимала аргументы из первой
-// 3. Довести функцию до ума, чтобы можно было бы ее воспроизвести на фронте
-// =========================
-
-// =========================
-// Общий комментарий
-// 1. Просьба использовать однострочные комментарии, для удобства ревью и запуска определенного части кода
-// 2. Желательно не использовать "var", изучить альтернативы и уметь объяснить в чем разница и преимущества
-// 3. В HTML желательно добавить разделители по фичам (можно хотябы комментариями разделить, типа -
-//   <!-- Start: First part -->
-//   <!-- <h2>Work with DOM</h2> -->
-//   <!-- End: First part -->)
-// 4. Сделать одну функцию, которая собирает все комментарии в ДОМ-е
-// =========================
-
-// =========================
-// Дополнительно
-// В качестве доп.инфы в реадми файле добавил список некоторых методов для работы с ДОМ,
-// возможно будет интересно проанализировать како-нить индивидуально )
-// =========================
-
 // =========================
 // TODO / Что нужно сделать
 //
@@ -296,10 +210,4 @@ window.onload = function () {
 // (что касается анимаций - то сделать круг, только бордер первоначальный стиль, а потом после клика по ему, он медленно закрашивается в произвольный цвет, и каждый клик, цвет другой, тоже произвольный)
 //
 // Для реализации данной задачи, нужно: Создать отдельный файл js - назвать его например - 'document-api.js'
-// =========================
-
-// =========================
-// TODO
-// Попробовать разобрать такой конструктор - TextDecoder
-// сделать пример, что бы в ответе в консоле, было любое читаемое слово, например -  Привет!
 // =========================
