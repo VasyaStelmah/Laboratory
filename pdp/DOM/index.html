@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./reset.css" type="text/css" />
+  <link rel="stylesheet" href="./styles.css" type="text/css" />
+  <title>DOM</title>
+</head>
+
+<body>
+  <hr>
+  <h2>Selecting elements</h2>
+  <hr>
+  <br>
+  <div id="playground">getElementById("playground")</div>
+  <input type="text" name="up" placeholder="getElementsByName('up')">
+  <h4>getElementsByTagName("h4")</h4>
+  <span class="textSpan">getElementsByClassName("textSpan")</span>
+  <div id="querySelectorById">querySelector("#querySelectorById")</div>
+  <p class="textQuerySelectorAll">1)querySelectorAll('.textQuerySelectorAll')</p>
+  <p class="textQuerySelectorAll">2)querySelectorAll('.textQuerySelectorAll')</p>
+  <hr>
+  <h2>Traversing elements</h2>
+  <hr>
+  <h2>Manipulating elements</h2>
+  <hr>
+  <h3>createElement, before, after, prepend append</h3>
+  <br>
+  <ol id="manipulatingElements">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ol>
+  <hr>
+  <h3>insertAdjacentHTML</h3>
+  <br>
+  <ol id="divInsertAdjacentHTML">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ol>
+  <hr>
+  <h3>innerHTML, innerText, textContent, outerHTML</h3>
+  <br>
+  <div id="divInnerHTML"></div>
+  <div id="divOuterHTML"></div>
+  <div id="divTextContent"></div>
+  <div id="divInnerText"></div>
+  <hr>
+  <h3>insertBefore</h3>
+  <br>
+  <div id="parentElement">
+    <span id="spanChildElement">childElement</span>
+  </div>
+  <hr>
+  <h2>Working with Attributes</h2>
+  <hr>
+  <h3>setAttribute,removeAttribute,getAttribute,hasAttribute</h3>
+  <br>
+  <div id="divAttribute" newAttribute="Получение атрибута">Текст для демонстрации добавления и удаления атрибута</div>
+  <button type="submit" onclick="addAttributeHidden()">Добавить атрибут hidden</button>
+  <button type="submit" onclick="removeAttributeHidden()">Удалить атрибут hidden</button>
+  <button type="submit" onclick="getAttributeNewAttribute()">Получить в консоли атрибут</button>
+  <button type="submit" onclick="hasAttributeNewAttribute()">Проверить существует ли атрибут в консоли</button>
+  <hr>
+  <h2>Manipulating Element’s Styles</h2>
+  <hr>
+  <br>
+  <div id="manipulatingStyles" class="manipulatingStyles" onclick="addAndRemoveStyles()">classList.toggle-При нажатии на
+    текст будут изменятьсяя стили текста</div>
+  <div id="addManipulatingStyles" onclick="addStyles()">classList.add-При нажатии на
+    текст будут добавляться стили текста</div>
+  <div id="removeManipulatingStyles" class="manipulatingStyles" onclick="removeStyles()">classList.remove-При нажатии на
+    текст будут удаляться стили текста</div>
+  <div id="containsManipulatingStyles" class="containsClass" onclick="containsStyles()">classList.contains-При
+    нажатии на текст будет проверяться наличие класса containsClass</div>
+  <hr>
+  <h2>Working with Events</h2>
+  <hr>
+  <h3>Mouse events</h3>
+  <br>
+  <div>Правый клик на этой кнопке выведет в консоли "Клик".</div>
+  <button oncontextmenu="onContextMenu()">Правый клик сюда</button>
+  <hr>
+  <h3>Keyboard events</h3>
+  <br>
+  <div>
+    <div>Функция выводт в input только значения которые могут использоваться при наборе телефона</div>
+    <input onkeydown="return checkPhoneKey(event.key)" placeholder="Введите телефон" type="tel" />
+  </div>
+  <hr>
+  <h3>onfocus, onblur events</h3>
+  <br>
+  <div>
+    <div>
+      При нажатии на поле input будет меняться подстветка поля
+    </div>
+    Ваш email: <input type="email" id="inputOnfocus" />
+  </div>
+  <hr>
+  <h3>Event Delegation</h3>
+  <br>
+  <div>
+    <div>
+      При нажатии на элементы списка будет меняться backgroundColor на красный и через секунды на синий
+    </div>
+    <ul id="myList">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Tomato</li>
+    </ul>
+  </div>
+  <hr>
+  <h2>Scripting Web Forms</h2>
+  <hr>
+  <br>
+  <h3>JavaScript Form</h3>
+  <br>
+  <form onsubmit="onClick()">
+    <fieldset>
+      Первый пример: нажмите Enter: <input type="text" value="Текст" /><br />
+      Второй пример: нажмите на кнопку "Отправить":
+      <input type="submit" value="Отправить" />
+      <div>
+        Email:<input type="email" /> Password:<input type="password" />
+      </div>
+    </fieldset>
+  </form>
+  <hr>
+  <h3>Select</h3>
+  <br>
+  <p>
+    Тег select позволяет создать элемент интерфейса в виде раскрывающегося
+    списка
+  </p>
+  <select id="select">
+    <option value="apple">Яблоко</option>
+    <option value="pear">Груша</option>
+    <option value="banana">Банан</option>
+  </select>
+  <hr>
+  <h3>Checkbox</h3>
+  <br>
+  <div>
+    <p>Флажки. Позволяют выбрать более одного варианта из предложенных.</p>
+    <input type="checkbox" name="checkbox" value="checkbox" />"Пиво"
+    <input type="checkbox" name="checkbox" value="checkbox" />"Чай"
+    <input type="checkbox" name="checkbox" value="checkbox" />"Кофе"
+  </div>
+  <hr>
+  <h3>Radio Button</h3>
+  <br>
+  <div>
+    <p>
+      Переключатели. Используются, когда следует выбрать один вариант из
+      нескольких предложенных.
+    </p>
+    <input type="radio" name="radiobutton" value="radiobutton" />"Пиво"
+    <input type="radio" name="radiobutton" value="radiobutton" />"Чай"
+    <input type="radio" name="radiobutton" value="radiobutton" />"Кофе"
+  </div>
+  <script src="./dom.js"></script>
+</body>
+
+</html>
