@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./reset.css" type="text/css" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <title>BOM</title>
+</head>
+
+<body>
+    <hr>
+    <h2>Window</h2>
+    <hr>
+    <br>
+    <h3>window.innerWidth, window.innerHeight-определение размера окна браузера</h3>
+    <p id="demo"></p>
+    <button onclick="windowOpen()">window.open-Открыть новое окно</button>
+    <button onclick="windowClose()">window.close-Закрыть текущее окно</button>
+    <hr>
+    <h3>sessionStorage</h3>
+    <br>
+    <button onclick="sessionStorageSet()">Записать значение в sessionStorage</button>
+    <button onclick="sessionStorageGet()">Получить значение из sessionStorage в консоли</button>
+    <button onclick="sessionStorageClear()">Удалить все значения в sessionStorage</button>
+    <hr>
+    <h3>localStorage</h3>
+    <br>
+    <button onclick="localStorageSet()">Записать значение в localStorage</button>
+    <button onclick="localStorageGet()">Получить значение из localStorage в консоли</button>
+    <button onclick="localStorageClear()">Удалить все значения в localStorage</button>
+    <hr>
+    <h3>Screen</h3>
+    <br>
+    <button onclick="windowScreen()">Вывести в консоль высоту ширину и глубину текщего экрана</button>
+    <hr>
+    <h3>Location</h3>
+    <br>
+    <p>Объект location содержит информацию о расположении текущей веб-страницы: URL, информацию о сервере, номер порта,
+        протокол. С помощью свойств объекта мы можем получить эту информацию:</p>
+    <button onclick="windowLocation()">Вывести в консоль информацию о расположении текущей веб-страницы</button>
+    <hr>
+    <h3>History</h3>
+    <br>
+    <p>Предоставляет доступ к истории текущей сессии браузера через объект history. Он предоставляет полезные методы и
+        свойства, которые позволяют переходить назад и вперёд по истории пользователя и манипулировать её содержимым.
+    </p>
+    <a href="./windowHistory.html">Перейти на второстепенную страницу</a>
+    <button onclick="windowHistoryBack()">Чтобы переместиться назад по истории:</button>
+    <button onclick="windowHistoryForward()">Чтобы переместиться вперед по истории:</button>
+    <button onclick="windowHistoryLength()">Узнать количество страниц, которые находятся в стеке истории</button>
+    <hr>
+    <h3>Navigator</h3>
+    <br>
+    <p>Объект navigator содержит информацию о браузере и операционной системе, в которой браузер запущен</p>
+    <button onclick="navigatorGeolacation()">Узнать твое точное местоположение</button>
+    <button onclick="navigatorUserAgent()">Возвращает строку агента пользователя для данного браузера</button>
+    <button onclick="windowHistoryLength()">Узнать количество страниц, которые находятся в стеке истории</button>
+    <hr>
+    <h3>Alert</h3>
+    <br>
+    <p>Она показывает сообщение и ждёт, пока пользователь нажмёт кнопку «ОК».</p>
+    <button onclick="windowAlert()">Вызвать сообщение</button>
+    <hr>
+    <h3>Prompt</h3>
+    <br>
+    <p>Она показывает модальное окно с текстом, полем для ввода текста и кнопками OK/Отмена.</p>
+    <button onclick="windowPrompt()">Вызвать сообщение</button>
+    <hr>
+    <h3>Confirm</h3>
+    <br>
+    <p>Функция confirm отображает модальное окно с текстом вопроса question и двумя кнопками: OK и Отмена.</p>
+    <button onclick="windowConfirm()">Вызвать сообщение</button>
+    <script src="./bom.js"></script>
+</body>
+
+</html>
