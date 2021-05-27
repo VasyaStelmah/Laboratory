@@ -1,0 +1,13 @@
+h2 {
+    justify-content: center;
+    display: flex;
+    font-size: larger;
+    font-weight: 600;
+}
+
+h3 {
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    font-weight: 500;
+}
