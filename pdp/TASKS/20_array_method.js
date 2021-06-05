@@ -137,25 +137,3 @@ ages.sort((a, b) => (a > b ? 1 : -1));
 console.log(ages);
 //==================[reduce]==================
 // 2. вернуть список сотрудников, которые могли бы работать в комнаниях - Company One, Company Two, Company Three, Company Four (в соответствии с их специальностью)
-const companies = [
-  { name: "Company One", category: "Finance", start: 1981, end: 2004 },
-  { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
-  { name: "Company Three", category: "Auto", start: 2000, end: 2007 },
-  { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
-  { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
-  { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
-  { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
-  { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
-  { name: "Company Nine", category: "Retail", start: 1970, end: 1989 },
-];
-const members = [
-  { name: "James", speciality: "Finance" },
-  { name: "Richard", speciality: "Retail" },
-  { name: "Thomas", speciality: "Auto" },
-  { name: "Charles", speciality: "Retail" },
-  { name: "Matthew", speciality: "Technology" },
-  { name: "Donald", speciality: "Finance" },
-  { name: "Andrew", speciality: "Auto" },
-  { name: "Kevin", speciality: "Technology" },
-  { name: "Edward", speciality: "Retail" },
-];
