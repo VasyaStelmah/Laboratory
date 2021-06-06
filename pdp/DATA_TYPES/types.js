@@ -13,14 +13,14 @@ let n = 123;
 
 /*-------STRING---------*/
 
-var str1 = "Hello World";
-var str2 = "Hello World";
-var personName = "Viktor";
-var personName2 = "Pavel";
-var personName3 = "Vasya";
-var message = 'Person name is "' + personName + '"';
-var message2 = "Person name is '" + personName2 + "'";
-var message3 = "Person name is '" + personName3 + "'";
+let str1 = "Hello World";
+let str2 = "Hello World";
+let personName = "Viktor";
+let personName2 = "Pavel";
+let personName3 = "Vasya";
+let message = 'Person name is "' + personName + '"';
+let message2 = "Person name is '" + personName2 + "'";
+let message3 = "Person name is '" + personName3 + "'";
 
 console.log(message);
 console.log(message2);
@@ -47,8 +47,8 @@ console.log(isFinite(1 / 0)); // false - число не валидное, пр�
 console.log(isFinite(9999999)); //true
 
 /*-------------------ARRAY--------------------*/
-var cars = ["Ford", "Mazda", "Kia", "BMW"];
-var any = [
+let cars = ["Ford", "Mazda", "Kia", "BMW"];
+let any = [
   42,
   "Apple",
   {
@@ -70,7 +70,7 @@ console.log(cars);
 /*--------------------OBJECT-------------*/
 //сначала его ключ, а потом его значение
 //Внутри объекта могут быть объекты
-var person = {
+let person = {
   name: "Vasya",
   year: 1990,
   family: ["Elena", "Igor"],
@@ -79,7 +79,7 @@ var person = {
     model: "Ford",
   },
   calculateAge: function () {
-    var age = 2018 - this.year; //this=person.year получить доступ для расчета года из этого объекта
+    let age = 2018 - this.year; //this=person.year получить доступ для расчета года из этого объекта
     console.log("Age is ", age);
   },
 };
@@ -89,16 +89,16 @@ console.log(person);
 console.log(person.name);
 // console.log(person['year'])
 console.log(person.car.year);
-var field = "car";
+let field = "car";
 console.log(person[field].year);
 //изменяем значение person.year
 person.year = 1993;
 //считаем возраст после изменения
 person.calculateAge();
 /*------Методы массивов ----------*/
-var str = "1,2,3,4,5,6,7,8";
+let str = "1,2,3,4,5,6,7,8";
 
-var array = str.split(","); //строку переводит в массив, 2 значение это сепеаратор который будет разделять значения
+let array = str.split(","); //строку переводит в массив, 2 значение это сепеаратор который будет разделять значения
 
 alert(array);
 // console.log(typeof array)
@@ -109,10 +109,10 @@ alert(array);
 // console.log(array.reverse())    //полностью поменять на обратный порядок
 
 array.splice(1, 1, "12"); //удаляет начиная со 2 элемента , 2 значение количество элементов, 3 значение добавление введенного элемента вместо удаленного
-var newArray = array.concat([1, 2]); //добавление в массив array, нового значения newArray --1,2
+let newArray = array.concat([1, 2]); //добавление в массив array, нового значения newArray --1,2
 // console.log(newArray)
 
-var objArr = [
+let objArr = [
   {
     name: "Max",
     age: 27,
@@ -128,27 +128,27 @@ var objArr = [
 ];
 //FIND выводит все элементы массива, проходит как цикл
 //Или один объект.
-var foundPerson = objArr.find(function (person) {
+let foundPerson = objArr.find(function (person) {
   console.log(person);
   return person.age === 20;
 });
 console.log(foundPerson);
 
 //FILTER метод фильтрует значения в массиве
-var oddArray = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(function (i) {
+let oddArray = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter(function (i) {
   return i % 2 === 0; //возвращает все четные числа из массива
 });
 // console.log(objArr)
 
 //MAP метод превращает в массиве из текста в строки
-var numArray = array.map(function (i) {
+let numArray = array.map(function (i) {
   // return parseInt(i)//Распарсит в массиве текст в числа
   return i * 2; //каждый элемент массива умножит на 2
 });
 
 /*---Объекты Math---------------*/
 
-// var num = 2.4;
+// let num = 2.4;
 
 // console.log(Math.random()); //выводит рандомное число
 // console.log(Math.floor(num));    //округляет в меньшую
@@ -157,7 +157,7 @@ var numArray = array.map(function (i) {
 // /*-----Объект JSON  -------*/
 // //как работать с объектами и переводить их к строкам
 
-var person = {
+let person = {
   name: "Max",
   age: 26,
   car: {
@@ -167,17 +167,7 @@ var person = {
   friends: ["Elena", "Igor"],
 };
 
-var str = JSON.stringify(person); //переводит объект в строку
+let str = JSON.stringify(person); //переводит объект в строку
 console.log(str);
 // console.log(JSON.parse(str));
 console.log(str.name);
-
-// /*---Дата и время с Date--------------*/
-// var date = new Date();
-// console.log(date);
-// console.log(date.getSeconds());
-// console.log(date.getFullYear());
-// console.log(date.setSeconds(45));
-// console.log(date.getSeconds());
-// var date3 = new Date(3600 * 24 * 1000 * 365);
-// console.log(date3);
