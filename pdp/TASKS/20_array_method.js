@@ -1,13 +1,13 @@
 const companies = [
-  { name: "Company One", category: "Finance", start: 1981, end: 2004 },
-  { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
-  { name: "Company Three", category: "Auto", start: 2000, end: 2007 },
-  { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
-  { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
-  { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
-  { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
-  { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
-  { name: "Company Nine", category: "Retail", start: 1970, end: 1989 },
+  { nameCompany: "Company Two", category: "Retail", start: 1992, end: 2008 },
+  { nameCompany: "Company Three", category: "Auto", start: 2000, end: 2007 },
+  { nameCompany: "Company Four", category: "Retail", start: 1989, end: 2010 },
+  { nameCompany: "Company Five", category: "Technology", start: 2009, end: 2014 },
+  { nameCompany: "Company Six", category: "Finance", start: 1987, end: 2010 },
+  { nameCompany: "Company Seven", category: "Auto", start: 1986, end: 1996 },
+  { nameCompany: "Company One", category: "Finance", start: 1981, end: 2004 },
+  { nameCompany: "Company Eight", category: "Technology", start: 2011, end: 2016 },
+  { nameCompany: "Company Nine", category: "Retail", start: 1970, end: 1989 },
 ];
 const members = [
   { name: "James", speciality: "Finance" },
@@ -108,21 +108,11 @@ console.log(informationCompanies(companies));
 // Объеденить два массива companies и members в один, по общему значению в пропертях speciality и category
 
 function joinCompanies(companiesOne, companiesTwo) {
-  return companiesOne.map(function (companiesOneObject) {
-    return companiesTwo.map(function (companiesTwoObject) {
-      if (companiesOneObject.category === companiesTwoObject.speciality) {
-        return {
-          nameOne: companiesOneObject.name,
-          category: companiesOneObject.category,
-          start: companiesOneObject.start,
-          end: companiesOneObject.end,
-          nameTwo: companiesTwoObject.name,
-          speciality: companiesTwoObject.speciality,
-        };
-      }
-    });
-  });
+  return companiesOne.map((item, i) => {
+    return Object.assign(item, companiesTwo[i])
+  })
 }
+console.log(joinCompanies(companies, members))
 console.log(joinCompanies(companies, members));
 // ==================[sort]==================
 // Сортировать массив companies по алфавиту а-я - по свойству name
@@ -137,3 +127,14 @@ ages.sort((a, b) => (a > b ? 1 : -1));
 console.log(ages);
 //==================[reduce]==================
 // 2. вернуть список сотрудников, которые могли бы работать в комнаниях - Company One, Company Two, Company Three, Company Four (в соответствии с их специальностью)
+let unionOfArrays = companies.reduce(function (accCompany, company, i) {
+  return accCompany.concat(Object.assign({
+    nameCompany: company.nameCompany, listEmployees: members.reduce((accEmployee, employee, i) => {
+      if (company.category === employee.speciality) {
+        return accEmployee.concat(employee.name)
+      }
+      return accEmployee
+    }, [])
+  }))
+}, []);
+console.log(unionOfArrays)

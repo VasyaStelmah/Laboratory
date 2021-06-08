@@ -1,7 +1,15 @@
 //============== Topic: Object
 {
-    let car = { name: "lada" };
-    const avtoPark = [car];
-    console.log(car);
-    console.log(avtoPark); // ? + Описать почему именно такой результат
+
+    let Lada = { name: "Lada" };
+    // присваивание объекту Мазда значения объекта Лада 
+    const Mazda = Lada;
+    // если изменить значение ключей в объекте Лада то и в объекте Мазда будут изменяться в соответствии со значениями как в объекте Лада
+    // так как значения передаются по ссылке на один и тот же объект
+    Lada.name = "Mazda"
+    console.log('Lada', Lada, 'Mazda', Mazda);//Lada { name: 'Mazda' } Mazda { name: 'Mazda' }
+    // Но если присваивать значения такие которые были исходными объекту Лада
+    // то записывается новая ссылка на объект, хоть и значения были одинаковыми
+    Lada = { name: "Lada" };
+    console.log('Lada', Lada, 'Mazda', Mazda);//Lada { name: 'Lada' } Mazda { name: 'Mazda' }
 }
