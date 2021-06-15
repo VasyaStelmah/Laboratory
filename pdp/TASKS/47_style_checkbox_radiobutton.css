@@ -1,11 +1,203 @@
-.option{
-  display: block;
-  margin-bottom: 0.25rem;
+body {
+  margin: 0;
+  padding: 25px;
+  font-family: sans-serif;
 }
-.check{}
-.check__input{
+/* Option */
+.option {
+  display: block;
+  margin-bottom: 0.5em;
+}
+/* Check */
+.check {
+  padding-left: 1.2em;
+}
+.check__input {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+.check__box {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -2.7em;
+  width: 0.8em;
+  height: 0.8em;
+  overflow: hidden;
+  border-radius: 0.05em;
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+.check__box-green {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -2.7em;
+  width: 0.8em;
+  height: 0.8em;
+  overflow: hidden;
+  border-radius: 0.05em;
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+.check__box-red {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -2.7em;
+  width: 0.8em;
+  height: 0.8em;
+  overflow: hidden;
+  border-radius: 0.2em;
+  background-color: #c1c1c2;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+
+.radio__box {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -1.2em;
+  width: 0.8em;
+  height: 0.8em;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+.radio__box-green {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -1.2em;
+  width: 0.8em;
+  height: 0.8em;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+.radio__box-red {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -1.2em;
+  width: 0.8em;
+  height: 0.8em;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.2em #c1c1c2;
+}
+/* Checked */
+.check__input:checked + .radio__box {
+  background-color: white;
+  background-image: url(47_style_checkbox_radio.svg);
+}
+.check__input:checked + .check__box {
+  background-color: white;
+  background-image: url(47_style_checkbox_radiobutton.svg);
+}
+.check__input:checked + .radio__box-green {
+  background-color: rgb(58, 170, 92);
+  box-shadow: 0 0 0 0.1em rgb(58, 170, 92);
+  background-image: url(47_style_checkbox_radiobutton_white.svg);
+}
+.check__input:checked + .check__box-green {
+  background-color: rgb(58, 170, 92);
+  box-shadow: 0 0 0 0.1em rgb(58, 170, 92);
+  background-image: url(47_style_checkbox_radiobutton_white.svg);
+}
+.check__input:checked + .radio__box-red {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 0.2em rgb(182, 86, 86);
+  background-image: url(47_style_checkbox_radio.svg);
+}
+.check__input:checked + .check__box-red {
+  background-color: rgb(182, 86, 86);
+  box-shadow: 0 0 0 0.1em rgb(182, 86, 86);
+  background-image: url(47_style_checkbox_radiobutton_white.svg);
+}
+/* Hover*/
+.hover {
+  box-shadow: 0 0 0 0.1em black;
+}
+.hover-green{
+  box-shadow: 0 0 0 0.1em rgb(58, 170, 92);
+}
+.hover-red{
+  box-shadow: 0 0 0 0.2em rgb(182, 86, 86);
+}
+.check__input:hover + .check__box {
+  box-shadow: 0 0 0 0.1em black;
+}
+.check__input:hover + .radio__box {
+  box-shadow: 0 0 0 0.1em black;
+}
+/* Disabled */
+.check__input:disabled + .check__box {
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+.check__input:disabled + .radio__box {
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+/* Disabled & Checked */
+.check__input:checked:disabled + .check__box {
+  background-color: white;
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+.check__input:checked:disabled + .radio__box {
+  background-color: white;
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+.check__input:checked:disabled + .check__box-green {
+  background-color: #c1c1c2;
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+.check__input:checked:disabled + .radio__box-green {
+  background-color: #c1c1c2;
+  box-shadow: 0 0 0 0.1em #c1c1c2;
+}
+.check__input:checked:disabled + .check__box-red {
+  box-shadow: 0 0 0 0.2em #c1c1c2;
+  background-color: #c1c1c2;
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+.check__input:checked:disabled + .radio__box-red {
+  box-shadow: 0 0 0 0.2em #c1c1c2;
+  background-color: white;
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+/* Disabled & Checked & Hover */
+.check__input:checked:disabled + .check__box-hover {
+  background-color: white;
+  box-shadow: 0 0 0 0.1em black;
+}
+.check__input:checked:disabled + .radio__box-hover {
+  background-color: white;
+  box-shadow: 0 0 0 0.1em black;
+}
+.check__input:checked:disabled + .check__box-hover-green {
+  box-shadow: 0 0 0 0.1em rgb(58, 170, 92);
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+.check__input:checked:disabled + .radio__box-hover-green {
+  box-shadow: 0 0 0 0.1em rgb(58, 170, 92);
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+.check__input:checked:disabled + .check__box-hover-red {
+  box-shadow: 0 0 0 0.2em rgb(182, 86, 86);
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+.check__input:checked:disabled + .radio__box-hover-red {
+  box-shadow: 0 0 0 0.2em rgb(182, 86, 86);
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
 }
