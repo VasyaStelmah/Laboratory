@@ -1,0 +1,11 @@
+.option{
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.check{}
+.check__input{
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
