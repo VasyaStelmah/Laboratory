@@ -1,36 +1,10 @@
 import './LendingPage.css';
+import Header from './Header';
+import Footer from './Footer';
 export default function App() {
   return (
     <>
-      <header className="showcase">
-        <div className="showcase-top">
-          <img alt="Netflix" src="https://i.ibb.co/r5krrdz/logo.png" />
-          <div className="showcase-top__right">
-            <div className="showcase-top__right-lang">
-              <select>
-                <option value="/by/" lang="en">English</option>
-                <option value="/by-ru/" lang="ru">Русский</option>
-              </select>
-            </div>
-            <div className="showcase-top__right-signin">
-              <a href="#" className="btn btn-rounded">Sign In</a>
-            </div>
-          </div>
-        </div>
-        <div className="showcase-content">
-          <h1 className="showcase-content__title">Unlimited movies, TV shows, and more.</h1>
-          <div className="showcase-content__subtitle">Watch anywhere. Cancel anytime.</div>
-          <div className="showcase-content__text">Ready to watch? Enter your email to create or restart your membership.</div>
-          <div className="showcase-content__form">
-            <div className="showcase-content__form-input">
-              <input type="text" placeholder="Email adress" />
-            </div>
-            <div className="showcase-content__form-button">
-              <button>Get started</button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
       <section className="our-story-card-outer">
         <div className="our-story-card-inner">
           <div className="our-story-card__text">
@@ -110,37 +84,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <footer className="footer-outer">
-        <div className="footer-inner">
-          <div className="footer-text">Questions? Contact us.</div>
-          <ul className="footer-cols">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Speed Test</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Cookie Preferences</a></li>
-            <li><a href="#">Legal Notices</a></li>
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Ways to Watch</a></li>
-            <li><a href="#">Corporate Information</a></li>
-            <li><a href="#">Netflix Originals</a></li>
-            <li><a href="#">Media Center</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#"></a></li>
-          </ul>
-          <div className="showcase-top__right-lang lang-footer">
-            <select>
-              <option value="/by/" lang="en">English</option>
-              <option value="/by-ru/" lang="ru">Русский</option>
-            </select>
-          </div>
-          <div className="footer-text">Netflix Belarus</div>
-        </div>
-      </footer>
+      <Footer />
     </>
-
   );
 };
