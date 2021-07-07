@@ -6,43 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checkbox & radio-button</title>
     <link rel="stylesheet" href="./47_style_checkbox_radiobutton.css">
+
 </head>
 <body>
-        <label class="check option">
-            <input class="check__input" type="checkbox">
-            <span class="check__box"></span>
-            <input class="check__input" type="radio">
-            Normal
-        </label>
-        <label class="check option">
-            <input class="check__input" type="checkbox">
-            <span class="check__box"></span>
-            <input class="check__input" type="radio">
-            Hover
-        </label>
-        <label class="check option">
-            <input class="check__input" type="checkbox" checked>
-            <span class="check__box"></span>
-            <input class="check__input" type="radio" checked>
-            Checked
-        </label>
-        <label class="check option">
-            <input class="check__input" type="checkbox" disabled>
-            <span class="check__box"></span>
-            <input class="check__input" type="radio" disabled>
-            Disabled
-        </label>
-        <label class="check option">
-            <input class="check__input" type="checkbox" disabled checked>
-            <span class="check__box"></span>
-            <input class="check__input" type="radio" disabled checked>
-            Disabled & checked
-        </label>
-        <label class="check option">
-            <input class="check__input" type="checkbox" disabled checked>
-            <span class="check__box"></span>
-            <input class="check__input" type="radio" disabled checked>
-            Disabled & checked & hover
-        </label>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check1">
+        <span class="check__box"></span>
+        <input class="check__input" type="radio" id="check1">
+        <span class="radio__box"></span>
+        <label for="check1">Normal</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check2">
+        <span class="check__box hover"></span>
+        <input class="check__input" type="radio" id="check2">
+        <span class="radio__box hover"></span>
+        <label for="check2">Hover</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check3" checked>
+        <span class="check__box"></span>
+        <input class="check__input" type="radio" id="check3" checked>
+        <span class="radio__box"></span>
+        <label for="check3">Checked</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check4" disabled>
+        <span class="check__box"></span>
+        <input class="check__input" type="radio" id="check4" disabled>
+        <span class="radio__box"></span>
+        <label for="check4">Disabled</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check5" disabled checked>
+        <span class="check__box"></span>
+        <input class="check__input" type="radio" id="check5" disabled checked>
+        <span class="radio__box"></span>
+        <label for="check5">Disabled & checked</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check6" disabled checked>
+        <span class="check__box check__box-hover"></span>
+        <input class="check__input" type="radio" id="check6" disabled checked>
+        <span class="radio__box  radio__box-hover"></span>
+        <label for="check6">Disabled & checked & hover</label>
+    </div>
+    <br>
+    <br>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check7">
+        <span class="check__box"></span>
+        <input class="check__input" type="radio" id="check7">
+        <span class="radio__box"></span>
+        <label for="check7">Normal</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check8">
+        <span class="check__box-green hover-green"></span>
+        <input class="check__input" type="radio" id="check8">
+        <span class="radio__box-green hover-green"></span>
+        <label for="check8">Hover</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check9" checked>
+        <span class="check__box-green"></span>
+        <input class="check__input" type="radio" id="check9" checked>
+        <span class="radio__box-green"></span>
+        <label for="check9">Checked</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check10" disabled>
+        <span class="check__box"></span>
+        <input class="check__input" type="radio" id="check10" disabled>
+        <span class="radio__box"></span>
+        <label for="check10">Disabled</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check11" disabled checked>
+        <span class="check__box-green"></span>
+        <input class="check__input" type="radio" id="check11" disabled checked>
+        <span class="radio__box-green"></span>
+        <label for="check11">Disabled & checked</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check12" disabled checked>
+        <span class="check__box-green check__box-hover-green"></span>
+        <input class="check__input" type="radio" id="check12" disabled checked>
+        <span class="radio__box-green  radio__box-hover-green"></span>
+        <label for="check12">Disabled & checked & hover</label>
+    </div>
+    <br>
+    <br>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check13">
+        <span class="check__box-red"></span>
+        <input class="check__input" type="radio" id="check13">
+        <span class="radio__box-red"></span>
+        <label for="check13">Normal</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check14">
+        <span class="check__box-red hover-red"></span>
+        <input class="check__input" type="radio" id="check14">
+        <span class="radio__box-red hover-red"></span>
+        <label for="check15">Hover</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check16" checked>
+        <span class="check__box-red"></span>
+        <input class="check__input" type="radio" id="check16" checked>
+        <span class="radio__box-red"></span>
+        <label for="check16">Checked</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check17" disabled>
+        <span class="check__box-red"></span>
+        <input class="check__input" type="radio" id="check17" disabled>
+        <span class="radio__box-red"></span>
+        <label for="check17">Disabled</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check18" disabled checked>
+        <span class="check__box-red"></span>
+        <input class="check__input" type="radio" id="check18" disabled checked>
+        <span class="radio__box-red"></span>
+        <label for="check18">Disabled & checked</label>
+    </div>
+    <div class="check option">
+        <input class="check__input" type="checkbox" id="check19" disabled checked>
+        <span class="check__box-red check__box-hover-red"></span>
+        <input class="check__input" type="radio" id="check19" disabled checked>
+        <span class="radio__box-red  radio__box-hover-red"></span>
+        <label for="check19">Disabled & checked & hover</label>
+    </div>
 </body>
 </html>
