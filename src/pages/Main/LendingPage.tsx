@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './LendingPage.css';
+import './LendingPage.scss';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 export default function App() {

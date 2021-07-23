@@ -1,4 +1,4 @@
-import './footer.css';
+import './footer.scss';
 type FooterProps = {
     isModal:boolean,
   }

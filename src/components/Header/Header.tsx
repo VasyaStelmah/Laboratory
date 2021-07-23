@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from "react-redux";
-import './header.css';
+import './header.scss';
 import ModalLoginWindow from '../ModalLoginWindow/ModalLoginWindow'
 import Footer from '../Footer/Footer';
 import { signup, signin } from "../../actions/auth";
