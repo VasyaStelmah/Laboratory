@@ -15,35 +15,35 @@ body {
   background: #000;
   color: white;
 }
-.our-story-card-outer {
+.section-card-outer {
   border-top: 0.6rem solid #2e2e2e;
 }
-.our-story-card-inner {
+.section-card-inner {
   display: flex;
   margin-left: 20rem;
   margin-right: 20rem;
   align-items: center;
 }
-.our-story-card__text {
+.section-card__text {
   flex-basis: 50%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-.our-story-card__text-title {
+.section-card__text-title {
   font-weight: 700;
   font-size: 3rem;
   line-height: 1.1;
   margin: 0rem 0 2rem;
 }
-.our-story-card__text-subtitle {
+.section-card__text-subtitle {
   color: #fff;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.25;
   margin: 0 0 2rem;
 }
-.our-story-card__video {
+.section-card__video {
   flex-basis: 50%;
 }
 .faq-question-outer {
@@ -129,39 +129,39 @@ a:hover {
   color: white;
 }
 @media (max-width: 460px) {
-   .our-story-card-inner {
+   .section-card-inner {
     display: block;
     margin-left: 0rem;
     margin-right: 0rem;
     align-items: center;
     margin-top: 2rem;
   }
-  .our-story-card-outer {
+  .section-card-outer {
     border-top: 0.6rem solid #2e2e2e;
   }
-  .our-story-card__text {
+  .section-card__text {
     flex-basis: 50%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
-  .our-story-card__text-title {
+  .section-card__text-title {
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.1;
     margin: 0rem 0 2rem;
   }
-  .our-story-card__text-subtitle {
+  .section-card__text-subtitle {
     color: #fff;
     font-weight: 400;
     font-size: .8rem;
     line-height: 1.25;
     margin: 0 0 2rem;
   }
-  .our-story-card__video {
+  .section-card__video {
     flex-basis: 50%;
   }
-  .our-story-card__video img {
+  .section-card__video img {
     width: 400px;
   }
   .faq-question-outer {

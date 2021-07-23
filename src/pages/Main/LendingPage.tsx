@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './LendingPage.scss';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 export default function App() {
   const [isModal, setIsModal]= useState<boolean>(false);
   return (
@@ -9,47 +9,47 @@ export default function App() {
       <Header isModal={isModal} setIsModal={setIsModal} />
       {!isModal
         ? <>
-          <section className="our-story-card-outer">
-            <div className="our-story-card-inner">
-              <div className="our-story-card__text">
-                <div className="our-story-card__text-title">Enjoy on your TV.</div>
-                <div className="our-story-card__text-subtitle">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</div>
+          <section className="section-card-outer">
+            <div className="section-card-inner">
+              <div className="section-card__text">
+                <div className="section-card__text-title">Enjoy on your TV.</div>
+                <div className="section-card__text-subtitle">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</div>
               </div>
-              <div className="our-story-card__video">
+              <div className="section-card__video">
                 <img alt="Watch on TV, PS, Xbox" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" />
               </div>
             </div>
           </section>
-          <section className="our-story-card-outer">
-            <div className="our-story-card-inner">
-              <div className="our-story-card__video">
+          <section className="section-card-outer">
+            <div className="section-card-inner">
+              <div className="section-card__video">
                 <img alt="watch offline" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" />
               </div>
-              <div className="our-story-card__text">
-                <div className="our-story-card__text-title">Download your shows to watch offline.</div>
-                <div className="our-story-card__text-subtitle">Save your favorites easily and always have something to watch</div>
+              <div className="section-card__text">
+                <div className="section-card__text-title">Download your shows to watch offline.</div>
+                <div className="section-card__text-subtitle">Save your favorites easily and always have something to watch</div>
               </div>
             </div>
           </section>
-          <section className="our-story-card-outer">
-            <div className="our-story-card-inner">
-              <div className="our-story-card__text">
-                <div className="our-story-card__text-title">Watch everywhere.</div>
-                <div className="our-story-card__text-subtitle">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</div>
+          <section className="section-card-outer">
+            <div className="section-card-inner">
+              <div className="section-card__text">
+                <div className="section-card__text-title">Watch everywhere.</div>
+                <div className="section-card__text-subtitle">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</div>
               </div>
-              <div className="our-story-card__video">
+              <div className="section-card__video">
                 <img alt="Stream unlimited movies" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" />
               </div>
             </div>
           </section>
-          <section className="our-story-card-outer">
-            <div className="our-story-card-inner">
-              <div className="our-story-card__video">
+          <section className="section-card-outer">
+            <div className="section-card-inner">
+              <div className="section-card__video">
                 <img alt="profiles for kids" src='https://occ-0-4923-2774.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABdFTpLmANuJpYneLq8L5m7CunMCi8e8Nl4y7xaPVWzG3IeoDoq17egTQAthApKg_4sdRWdwuR8KadWu1frjL3JQImpwq.png?r=fcd' />
               </div>
-              <div className="our-story-card__text">
-                <div className="our-story-card__text-title">Create profiles for kids.</div>
-                <div className="our-story-card__text-subtitle">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</div>
+              <div className="section-card__text">
+                <div className="section-card__text-title">Create profiles for kids.</div>
+                <div className="section-card__text-subtitle">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</div>
               </div>
             </div>
           </section>
