@@ -1,4 +1,4 @@
-import './footer.css';
+import './footer.scss';
 type FooterProps = {
     isModal:boolean,
   }
@@ -25,7 +25,7 @@ export default function Footer({isModal}:FooterProps) {
 					<li><a href="#section">Contact Us</a></li>
 					<li><a href="#section">{""}</a></li>
 				</ul>
-				<div className="showcase-top__right-lang lang-footer">
+				<div className="section-header__right-lang lang-footer">
 					<select>
 						<option value="/by/" lang="en">English</option>
 						<option value="/by-ru/" lang="ru">Русский</option>
