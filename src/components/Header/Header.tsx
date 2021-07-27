@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from "react-redux";
-import './header.css';
-import ModalLoginWindow from '../ModalLoginWindow/ModalLoginWindow'
+import './header.scss';
+import ModalLoginWindow from '../ModalLoginWindow'
 import Footer from '../Footer/Footer';
 import { signup, signin } from "../../actions/auth";
 import { Dispatch } from "redux"
@@ -49,39 +49,41 @@ export default function Header({ isModal, setIsModal }:HeaderProps) {
 	}, [password, setPassword]);
 	return (!isModal
 		? <>
-			<header className="showcase">
-				<div className="showcase-top">
+			<header className="section-header">
+				<div className="section-header-top">
 					<img alt="Netflix" src="https://i.ibb.co/r5krrdz/logo.png" />
-					<div className="showcase-top__right">
-						<div className="showcase-top__right-lang">
+					<div className="section-header-top__right">
+						<div className="section-header-top__right-lang">
 							<select>
 								<option value="/by/" lang="en">English</option>
 								<option value="/by-ru/" lang="ru">Русский</option>
 							</select>
 						</div>
-						<div className="showcase-top__right-signin">
+						<div className="section-header-top__right-signin">
 							<button onClick={handleModalLoginWindow}>Sign In</button>
 						</div>
 					</div>
 				</div>
-				<div className="showcase-content">
-					<h1 className="showcase-content__title">Unlimited movies, TV shows, and more.</h1>
-					<div className="showcase-content__subtitle">Watch anywhere. Cancel anytime.</div>
-					<div className="showcase-content__text">Ready to watch? Enter your email to create or restart your membership.</div>
-					<div className="showcase-content__form">
-						<div className="showcase-content__form-input">
-							<input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email adress" />
+				<div className="section-header-content">
+					<h1 className="section-header-content__title">Unlimited movies, TV shows, and more.</h1>
+					<div className="section-header-content__subtitle">Watch anywhere. Cancel anytime.</div>
+					<div className="section-header-content__text">Ready to watch? Enter your email to create or restart your membership.</div>
+					<form action="">
+						<div className="section-header-content__form">
+							<div className="section-header-content__form-input">
+								<input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email adress" />
+							</div>
+							<div className="section-header-content__form-button">
+								<button>Get started</button>
+							</div>
 						</div>
-						<div className="showcase-content__form-button">
-							<button>Get started</button>
-						</div>
-					</div>
+					</form>
 				</div>
 			</header>
 		</>
 		: <ModalLoginWindow>
-			<header className="showcase">
-				<div className="showcase-top">
+			<header className="section-header">
+				<div className="section-header-top">
 					<img alt="Netflix" src="https://i.ibb.co/r5krrdz/logo.png" />
 				</div>
 				<div className="modal">

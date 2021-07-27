@@ -4,11 +4,11 @@
   font-weight: 200;
   font-size: 1rem;
   line-height: 1.25;
-}
-.footer-outer__modal {
-  font-weight: 200;
-  font-size: 1rem;
-  line-height: 1.25;
+  &__modal {
+    font-weight: 200;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
 }
 .footer-inner {
   display: flex;
@@ -17,26 +17,26 @@
   margin-left: 4rem;
   margin-top: 4rem;
   flex-direction: column;
-}
-.footer-inner div {
-  margin-top: 2rem;
+  div {
+    margin-top: 2rem;
+  }
 }
 .footer-cols {
   margin-top: 2rem;
   display: flex;
   align-content: center;
   flex-flow: wrap;
+  li {
+    margin-right: 2rem;
+    width: 20%;
+    height: 20%;
+  }
+  a {
+    color: #8c8c8c !important;
+    font-size: 0.9rem;
+  }
 }
-.footer-cols li {
-  margin-right: 2rem;
-  width: 20%;
-  height: 20%;
-}
-.footer-cols a {
-  color: #8c8c8c !important;
-  font-size: 0.9rem;
-}
-.showcase-top__right-lang .lang-footer {
+.section-header-top__right-lang .lang-footer {
   align-self: flex-start;
 }
 @media (max-width: 460px) {
@@ -51,29 +51,29 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    a {
+      color: #999;
+      font-size: 0.6rem;
+    }
   }
   .footer-inner {
     margin-top: 2rem;
     margin-left: 4rem;
     flex-direction: column;
-  }
-  .footer-inner div {
-    margin-top: 2rem;
-  }
+    div {
+      margin-top: 2rem;
+    }
+  } 
   .footer-cols {
     margin-top: 1rem;
     display: flex;
     align-content: center;
     flex-flow: wrap;
-  }
-  .footer-cols li {
-    margin-right: 2rem;
-    width: 40%;
-    height: 40%;
-  }
-  .footer-outer a {
-    color: #999;
-    font-size: 0.6rem;
+    li {
+      margin-right: 2rem;
+      width: 40%;
+      height: 40%;
+    }
   }
   .footer-outer__modal a {
     color: #999;
