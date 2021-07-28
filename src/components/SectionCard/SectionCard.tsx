@@ -1,6 +1,13 @@
 import './SectionCard.scss';
-export default function SectionCard() {
+type SectionProps = {
+  children: React.ReactNode,
+}
+export default function SectionCard({children}:SectionProps) {
 	  return (
-			<div>Section</div>
+      <section className="section-card-outer">
+        <div className="section-card-inner">
+          {children}
+        </div>
+      </section>
 		)
 }

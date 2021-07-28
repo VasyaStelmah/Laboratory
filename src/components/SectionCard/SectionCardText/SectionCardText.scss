@@ -1,0 +1,40 @@
+.section-card__text {
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.section-card__text-title {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0rem 0 2rem;
+}
+.section-card__text-subtitle {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+}
+@media (max-width: 460px) {
+  .section-card__text {
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .section-card__text-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin: 0rem 0 2rem;
+  }
+  .section-card__text-subtitle {
+    color: #fff;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+  }
+}
