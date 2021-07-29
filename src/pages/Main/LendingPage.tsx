@@ -37,23 +37,23 @@ export default function App() {
   return (
     <>
       <Header isModal={isModal} setIsModal={setIsModal} />
-      {!isModal
-        ? <>
-            {
-              sectionCard.map((obj,index)=>{
-                return (
-                  index%2===0 
-                  ? <SectionCard key={index}>
-                      <SectionCardText title={obj.title} subtitle={obj.subtitle} />
-                      <SectionCardVideo alt={obj.alt} src={obj.src} />
-                    </SectionCard>
-                  : <SectionCard key={index}>
-                      <SectionCardVideo alt={obj.alt} src={obj.src} />
-                      <SectionCardText title={obj.title} subtitle={obj.subtitle} />
-                    </SectionCard>
-                )
-              })
-            }
+        {!isModal
+          ? <>
+              {
+                sectionCard.map((obj,index)=>{
+                  return (
+                    index%2===0 
+                    ? <SectionCard key={index}>
+                        <SectionCardText title={obj.title} subtitle={obj.subtitle} />
+                        <SectionCardVideo alt={obj.alt} src={obj.src} />
+                      </SectionCard>
+                    : <SectionCard key={index}>
+                        <SectionCardVideo alt={obj.alt} src={obj.src} />
+                        <SectionCardText title={obj.title} subtitle={obj.subtitle} />
+                      </SectionCard>
+                  )
+                })
+              }
             <SectionFAQ/>
           <Footer isModal={isModal} />
         </>

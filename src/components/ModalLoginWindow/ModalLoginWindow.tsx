@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-type PortalProps = {
+type Props = {
   children: React.ReactNode,
 }
-export default function ModalLoginWindow({children}:PortalProps) {
+export default function ModalLoginWindow({children}:Props) {
 	let el: HTMLDivElement  = document.createElement('div');
 	useEffect(() => {
 		document.body.appendChild(el);

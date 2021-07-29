@@ -1,8 +1,8 @@
 import './SectionCard.scss';
-type SectionProps = {
+type Props = {
   children: React.ReactNode,
 }
-export default function SectionCard({children}:SectionProps) {
+export default function SectionCard({children}:Props) {
 	  return (
       <section className="section-card-outer">
         <div className="section-card-inner">
