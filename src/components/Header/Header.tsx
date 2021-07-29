@@ -5,11 +5,11 @@ import ModalLoginWindow from '../ModalLoginWindow'
 import Footer from '../Footer/Footer';
 import { signup, signin } from "../../actions/auth";
 import { Dispatch } from "redux"
-type Props={
+type Propss={
 	isModal:boolean,
 	setIsModal:React.Dispatch<React.SetStateAction<boolean>>
 }
-export default function Header({ isModal, setIsModal }:Props) {
+export default function Header({ isModal, setIsModal }:Propss) {
 	const [email, setEmail] = useState<string>("");
 	const [password, setPassword] = useState<string>("");
 	const [isSignup] = useState<boolean>(false);
