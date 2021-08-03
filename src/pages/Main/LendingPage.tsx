@@ -5,7 +5,8 @@ import Footer from '../../components/Footer';
 import SectionCard from '../../components/SectionCard';
 import SectionCardText from '../../components/SectionCard/SectionCardText';
 import SectionCardVideo from '../../components/SectionCard/SectionCardVideo';
-import SectionFAQ from '../../components/SectionFAQ'
+import SectionFAQ from '../../components/SectionFAQ';
+
 export default function App() {
   const sectionCard = [
     {
@@ -32,7 +33,7 @@ export default function App() {
       alt:"profiles for kids",
       src:'https://occ-0-4923-2774.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABdFTpLmANuJpYneLq8L5m7CunMCi8e8Nl4y7xaPVWzG3IeoDoq17egTQAthApKg_4sdRWdwuR8KadWu1frjL3JQImpwq.png?r=fcd',
     },
-  ]
+  ];
   const [isModal, setIsModal]= useState<boolean>(false);
   return (
     <>
@@ -51,7 +52,7 @@ export default function App() {
                         <SectionCardVideo alt={obj.alt} src={obj.src} />
                         <SectionCardText title={obj.title} subtitle={obj.subtitle} />
                       </SectionCard>
-                  )
+                  );
                 })
               }
             <SectionFAQ/>

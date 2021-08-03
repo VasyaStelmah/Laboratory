@@ -1,24 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch } from "react-redux";
 import './header.scss';
-import ModalLoginWindow from '../ModalLoginWindow'
+import { Dispatch } from "redux";
+import ModalLoginWindow from '../ModalLoginWindow';
 import Footer from '../Footer/Footer';
 import { signup, signin } from "../../actions/auth";
-import { Dispatch } from "redux"
+
 type Propss={
 	isModal:boolean,
 	setIsModal:React.Dispatch<React.SetStateAction<boolean>>
-}
+};
 export default function Header({ isModal, setIsModal }:Propss) {
 	const [email, setEmail] = useState<string>("");
 	const [password, setPassword] = useState<string>("");
 	const [isSignup] = useState<boolean>(false);
 	const dispatch: Dispatch<any> = useDispatch();
-	const emailRef = useRef<HTMLInputElement>(null)
-	const passwordRef= useRef<HTMLInputElement>(null)
+	const emailRef = useRef<HTMLInputElement>(null);
+	const passwordRef= useRef<HTMLInputElement>(null);
 	const handleModalLoginWindow:React.MouseEventHandler<HTMLButtonElement> = () => {
-		setIsModal(!isModal)
-	}
+		setIsModal(!isModal);
+	};
 	const handleSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault();
 		if (isSignup) {
@@ -27,24 +28,24 @@ export default function Header({ isModal, setIsModal }:Propss) {
 			dispatch(signin(email, password));
 		}
 		setEmail('');
-		setPassword('')
+		setPassword('');
 	};
 	const handleSetEmail = (e:React.ChangeEvent<HTMLInputElement>):void => {
-		setEmail(emailRef.current!.value)
-	}
+		setEmail(emailRef.current!.value);
+	};
 	const handleSetPass = (e:React.ChangeEvent<HTMLInputElement>):void => {
-			setPassword(passwordRef.current!.value)
-	}
+			setPassword(passwordRef.current!.value);
+	};
 	useEffect(() => {
 		if (typeof emailRef.current === 'undefined' || emailRef.current === null) {
 		} else {
-			emailRef.current!.focus()
+			emailRef.current!.focus();
 		}
 	}, [email, setEmail]);
 	useEffect(() => {
 		if (typeof passwordRef.current === 'undefined'||passwordRef.current === null) {
 		} else {
-			passwordRef.current!.focus()
+			passwordRef.current!.focus();
 		}
 	}, [password, setPassword]);
 	return (!isModal
@@ -118,5 +119,5 @@ export default function Header({ isModal, setIsModal }:Propss) {
 			</header>
 			<Footer isModal={isModal} />
 		</ModalLoginWindow >
-	)
+	);
 }

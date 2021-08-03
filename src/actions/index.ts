@@ -8,11 +8,11 @@ export const signIn = async (email:string, password:string) => {
       }
     });
     const json = await response.json();
-    return JSON.stringify(json)
+    return JSON.stringify(json);
   } catch (error) {
     console.error('Ошибка:', error);
   }
-}
+};
 export const signUp = async (email:string, password:string) => {
   try {
     const response = await fetch('http://localhost:5000/user/signin', {
@@ -23,8 +23,8 @@ export const signUp = async (email:string, password:string) => {
       }
     });
     const json = await response.json();
-    return JSON.stringify(json)
+    return JSON.stringify(json);
   } catch (error) {
     console.error('Ошибка:', error);
   }
-}
+};

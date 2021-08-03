@@ -4,7 +4,8 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers";
-import App from '../src/pages/Main';
+import App from "./pages/Main";
+
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 ReactDOM.render(
   <React.StrictMode>
