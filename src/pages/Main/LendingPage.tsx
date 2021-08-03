@@ -2,92 +2,59 @@ import { useState } from 'react';
 import './LendingPage.scss';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SectionCard from '../../components/SectionCard';
+import SectionCardText from '../../components/SectionCard/SectionCardText';
+import SectionCardVideo from '../../components/SectionCard/SectionCardVideo';
+import SectionFAQ from '../../components/SectionFAQ'
 export default function App() {
+  const sectionCard = [
+    {
+      title:'Enjoy on your TV.',
+      subtitle:'Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.',
+      alt:"Watch on TV, PS, Xbox",
+      src:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png",
+    },
+    {
+      title:'Download your shows to watch offline.',
+      subtitle:'Save your favorites easily and always have something to watch',
+      alt:"watch offline",
+      src:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg",
+    },
+    {
+      title:'Watch everywhere.',
+      subtitle:'Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.',
+      alt:"Stream unlimited movies",
+      src:"https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png",
+    },
+    {
+      title:'Create profiles for kids.',
+      subtitle:'Send kids on adventures with their favorite characters in a space made just for them—free with your membership.',
+      alt:"profiles for kids",
+      src:'https://occ-0-4923-2774.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABdFTpLmANuJpYneLq8L5m7CunMCi8e8Nl4y7xaPVWzG3IeoDoq17egTQAthApKg_4sdRWdwuR8KadWu1frjL3JQImpwq.png?r=fcd',
+    },
+  ]
   const [isModal, setIsModal]= useState<boolean>(false);
   return (
     <>
       <Header isModal={isModal} setIsModal={setIsModal} />
-      {!isModal
-        ? <>
-          <section className="section-card-outer">
-            <div className="section-card-inner">
-              <div className="section-card__text">
-                <div className="section-card__text-title">Enjoy on your TV.</div>
-                <div className="section-card__text-subtitle">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</div>
-              </div>
-              <div className="section-card__video">
-                <img alt="Watch on TV, PS, Xbox" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" />
-              </div>
-            </div>
-          </section>
-          <section className="section-card-outer">
-            <div className="section-card-inner">
-              <div className="section-card__video">
-                <img alt="watch offline" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" />
-              </div>
-              <div className="section-card__text">
-                <div className="section-card__text-title">Download your shows to watch offline.</div>
-                <div className="section-card__text-subtitle">Save your favorites easily and always have something to watch</div>
-              </div>
-            </div>
-          </section>
-          <section className="section-card-outer">
-            <div className="section-card-inner">
-              <div className="section-card__text">
-                <div className="section-card__text-title">Watch everywhere.</div>
-                <div className="section-card__text-subtitle">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</div>
-              </div>
-              <div className="section-card__video">
-                <img alt="Stream unlimited movies" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" />
-              </div>
-            </div>
-          </section>
-          <section className="section-card-outer">
-            <div className="section-card-inner">
-              <div className="section-card__video">
-                <img alt="profiles for kids" src='https://occ-0-4923-2774.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABdFTpLmANuJpYneLq8L5m7CunMCi8e8Nl4y7xaPVWzG3IeoDoq17egTQAthApKg_4sdRWdwuR8KadWu1frjL3JQImpwq.png?r=fcd' />
-              </div>
-              <div className="section-card__text">
-                <div className="section-card__text-title">Create profiles for kids.</div>
-                <div className="section-card__text-subtitle">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</div>
-              </div>
-            </div>
-          </section>
-          <section className="faq-question-outer">
-            <div className="faq-question-inner">
-              <div className="faq-question__text-title">Frequently Asked Questions</div>
-              <ul className="faq-question__button">
-                <a href="#section">
-                  <h2>What is Netflix?</h2>
-                </a>
-                <a href="#section">
-                  <h2>How much does Netflix cost?</h2>
-                </a>
-                <a href="#section">
-                  <h2>Where can I watch?</h2>
-                </a>
-                <a href="#section">
-                  <h2>How do I cancel?</h2>
-                </a>
-                <a href="#section">
-                  <h2>What can I watch on Netflix?</h2>
-                </a>
-                <a href="#section">
-                  <h2>Is Netflix good for kids?</h2>
-                </a>
-                <a href="#section">
-                  <h2>Why am I seeing this Language?</h2>
-                </a>
-              </ul>
-              <h2 className="faq-question-subtitle">Ready to watch? Enter your email to create or restart your membership.</h2>
-              <div className="faq-question__form">
-                <div className="faq-question__form-input">
-                  <input type="text" placeholder="Email adress" />
-                </div>
-                <div className="faq-question__form-button"><button>Get started</button></div>
-              </div>
-            </div>
-          </section>
+        {!isModal
+          ? <>
+              {
+                sectionCard.map((obj,index)=>{
+                  return (
+                    index%2===0 
+                    ? <SectionCard key={index}>
+                        <SectionCardText title={obj.title} subtitle={obj.subtitle} />
+                        <SectionCardVideo alt={obj.alt} src={obj.src} />
+                      </SectionCard>
+                    : <SectionCard key={index}>
+                        <SectionCardVideo alt={obj.alt} src={obj.src} />
+                        <SectionCardText title={obj.title} subtitle={obj.subtitle} />
+                      </SectionCard>
+                  )
+                })
+              }
+            <SectionFAQ/>
           <Footer isModal={isModal} />
         </>
         : null}

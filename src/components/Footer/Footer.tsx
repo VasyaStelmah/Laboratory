@@ -1,8 +1,8 @@
 import './footer.scss';
-type FooterProps = {
+type Props = {
     isModal:boolean,
   }
-export default function Footer({isModal}:FooterProps) {
+export default function Footer({isModal}:Props) {
 	return (
 		<footer className={!isModal ? "footer-outer" : "footer - outer__modal"}>
 			<div className="footer-inner">

@@ -1,0 +1,21 @@
+.section-card-outer {
+  border-top: 0.6rem solid #2e2e2e;
+}
+.section-card-inner {
+  display: flex;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  align-items: center;
+}
+@media (max-width: 460px) {
+   .section-card-inner {
+    display: block;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .section-card-outer {
+    border-top: 0.6rem solid #2e2e2e;
+  }
+}

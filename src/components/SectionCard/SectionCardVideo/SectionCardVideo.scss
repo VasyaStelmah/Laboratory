@@ -1,0 +1,11 @@
+.section-card__video {
+  flex-basis: 50%;
+}
+@media (max-width: 460px) {
+  .section-card__video {
+    flex-basis: 50%;
+  }
+  .section-card__video img {
+    width: 400px;
+  }
+}
