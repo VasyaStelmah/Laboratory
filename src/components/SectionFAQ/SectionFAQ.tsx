@@ -1,4 +1,5 @@
 import './SectionFAQ.scss';
+
 const linkText = [
   'What is Netflix?',
   'How much does Netflix cost?',
@@ -7,7 +8,7 @@ const linkText = [
   'What can I watch on Netflix?',
   'Is Netflix good for kids?',
   'Why am I seeing this Language?'
-]
+];
 
 export default function SectionFAQ() {
 	return (
@@ -20,7 +21,7 @@ export default function SectionFAQ() {
               <a href="#section" key={index}>
                 <h2>{item}</h2>
               </a>
-            )
+            );
           })}
         </ul>
         <h2 className="faq-question-subtitle">Ready to watch? Enter your email to create or restart your membership.</h2>
@@ -34,5 +35,5 @@ export default function SectionFAQ() {
         </div>
       </div>
     </section>
-	)
+	);
 }

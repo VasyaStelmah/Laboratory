@@ -1,6 +1,6 @@
-import { signIn } from "./index";
-import { signUp } from "./index";
 import { Dispatch } from "redux";
+import { signIn , signUp } from "./index";
+
 
 export const signin = (email:string, password:string) => async (dispatch: Dispatch) => {
   try {

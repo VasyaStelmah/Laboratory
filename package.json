@@ -4,6 +4,42 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "homepage": "https://vasyastelmah.github.io/Laboratory/",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
+    "lint:fix": "eslint src/**/*.{js,jsx,ts,tsx} --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "airbnb",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/react",
+      "prettier/@typescript-eslint"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -22,32 +58,15 @@
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "typescript": "^4.3.5",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-react": "^7.20.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.1"
   }
 }

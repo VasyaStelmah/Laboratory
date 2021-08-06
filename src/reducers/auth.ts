@@ -3,7 +3,7 @@ type Action = {
   type: "AUTH" | "LOGOUT",
   data: JSON,
   payload: JSON
-}
+};
 export const authReducer = (state:State= { authData: null } , action:Action) => {
   switch (action.type) {
     case "AUTH":

@@ -1,8 +1,9 @@
 import './footer.scss';
+
 type Props = {
     isModal:boolean,
-  }
-export default function Footer({isModal}:Props) {
+  };
+export default function Footer({ isModal }:Props) {
 	return (
 		<footer className={!isModal ? "footer-outer" : "footer - outer__modal"}>
 			<div className="footer-inner">
@@ -23,7 +24,7 @@ export default function Footer({isModal}:Props) {
 					<li><a href="#section">Media Center</a></li>
 					<li><a href="#section">Terms of Use</a></li>
 					<li><a href="#section">Contact Us</a></li>
-					<li><a href="#section">{""}</a></li>
+					<li><a href="#section" /></li>
 				</ul>
 				<div className="section-header__right-lang lang-footer">
 					<select>
@@ -34,5 +35,5 @@ export default function Footer({isModal}:Props) {
 				<div className="footer-text">Netflix Belarus</div>
 			</div>
 		</footer>
-	)
+	);
 }
