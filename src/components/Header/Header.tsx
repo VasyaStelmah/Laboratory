@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from "react-redux";
 import './header.scss';
 import { Dispatch } from "redux";
@@ -37,14 +37,12 @@ export default function Header({ isModal, setIsModal }:Propss) {
 			setPassword(passwordRef.current!.value);
 	};
 	useEffect(() => {
-		if (typeof emailRef.current === 'undefined' || emailRef.current === null) {
-		} else {
+		if (typeof emailRef.current !== 'undefined' || emailRef.current !== null) {
 			emailRef.current!.focus();
 		}
 	}, [email, setEmail]);
 	useEffect(() => {
-		if (typeof passwordRef.current === 'undefined'||passwordRef.current === null) {
-		} else {
+		if (typeof passwordRef.current !== 'undefined'||passwordRef.current !== null) {
 			passwordRef.current!.focus();
 		}
 	}, [password, setPassword]);
@@ -61,7 +59,7 @@ export default function Header({ isModal, setIsModal }:Propss) {
 							</select>
 						</div>
 						<div className="section-header-top__right-signin">
-							<button onClick={handleModalLoginWindow}>Sign In</button>
+							<button type='button' onClick={handleModalLoginWindow}>Sign In</button>
 						</div>
 					</div>
 				</div>
@@ -75,7 +73,7 @@ export default function Header({ isModal, setIsModal }:Propss) {
 								<input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email adress" />
 							</div>
 							<div className="section-header-content__form-button">
-								<button>Get started</button>
+								<button type="button">Get started</button>
 							</div>
 						</div>
 					</form>
@@ -90,7 +88,7 @@ export default function Header({ isModal, setIsModal }:Propss) {
 				<div className="modal">
 					<div className="modal__title">
 						<span className="modal__title-text">Sign In</span>
-						<button className="modal__title-button" onClick={handleModalLoginWindow}>X</button>
+						<button type='button' className="modal__title-button" onClick={handleModalLoginWindow}>X</button>
 					</div>
 					<form onSubmit={handleSubmit} className="modal__form">
 						<div className="modal__form-input">
@@ -113,7 +111,7 @@ export default function Header({ isModal, setIsModal }:Propss) {
 								type="password"
 								placeholder="Password" />
 						</div>
-						<button className="modal__form-button">Sign In</button>
+						<button type='button' className="modal__form-button">Sign In</button>
 					</form>
 				</div>
 			</header>

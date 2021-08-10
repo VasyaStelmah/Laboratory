@@ -21,10 +21,15 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react-hooks'],
   rules: {
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
     semi: 'off',
     '@typescript-eslint/semi': ['error'],
     camelcase: 'warn',

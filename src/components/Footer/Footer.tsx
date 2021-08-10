@@ -24,7 +24,6 @@ export default function Footer({ isModal }:Props) {
 					<li><a href="#section">Media Center</a></li>
 					<li><a href="#section">Terms of Use</a></li>
 					<li><a href="#section">Contact Us</a></li>
-					<li><a href="#section" /></li>
 				</ul>
 				<div className="section-header__right-lang lang-footer">
 					<select>
