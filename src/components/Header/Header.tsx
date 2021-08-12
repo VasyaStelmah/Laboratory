@@ -1,32 +1,35 @@
 import { useState, useEffect, useRef } from 'react';
-import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import './header.scss';
-import { Dispatch } from "redux";
 import ModalLoginWindow from '../ModalLoginWindow';
 import Footer from '../Footer/Footer';
-import { signup, signin } from "../../actions/auth";
+import { useActions } from "../../hooks/useActions";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 
-type Propss={
+type Props={
 	isModal:boolean,
 	setIsModal:React.Dispatch<React.SetStateAction<boolean>>
 };
-export default function Header({ isModal, setIsModal }:Propss) {
+export default function Header({ isModal, setIsModal }:Props) {
+  const { user, loading, error } = useTypedSelector(state => state.auth);
+  const { signin, signup } = useActions();
+
 	const [email, setEmail] = useState<string>("");
 	const [password, setPassword] = useState<string>("");
 	const [isSignup] = useState<boolean>(false);
-	const dispatch: Dispatch<any> = useDispatch();
+
 	const emailRef = useRef<HTMLInputElement>(null);
 	const passwordRef= useRef<HTMLInputElement>(null);
+
 	const handleModalLoginWindow:React.MouseEventHandler<HTMLButtonElement> = () => {
 		setIsModal(!isModal);
 	};
 	const handleSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault();
 		if (isSignup) {
-			dispatch(signup(email, password));
+			signup(email, password);
 		} else {
-			dispatch(signin(email, password));
+			signin(email, password);
 		}
 		setEmail('');
 		setPassword('');
@@ -38,14 +41,18 @@ export default function Header({ isModal, setIsModal }:Propss) {
 			setPassword(passwordRef.current!.value);
 	};
 	useEffect(() => {
-		if (typeof emailRef.current !== 'undefined' || emailRef.current !== null) {
-			emailRef.current!.focus();
-		}
+		// eslint-disable-next-line no-empty
+		if (typeof emailRef.current === 'undefined' || emailRef.current === null) {
+		} else{
+      emailRef.current!.focus();
+    }
 	}, [email, setEmail]);
 	useEffect(() => {
-		if (typeof passwordRef.current !== 'undefined'||passwordRef.current !== null) {
+    // eslint-disable-next-line no-empty
+		if (typeof passwordRef.current === 'undefined'||passwordRef.current === null) {
+		} else {
 			passwordRef.current!.focus();
-		}
+    }
 	}, [password, setPassword]);
 	return (!isModal
 		? <>

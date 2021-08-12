@@ -30,6 +30,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
+    "no-shadow": ["error", { "builtinGlobals": true, "hoist": "functions", "allow": [] }],
     semi: 'off',
     '@typescript-eslint/semi': ['error'],
     camelcase: 'warn',
