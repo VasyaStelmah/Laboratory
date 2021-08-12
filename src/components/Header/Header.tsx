@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 import './header.scss';
 import { Dispatch } from "redux";
 import ModalLoginWindow from '../ModalLoginWindow';
@@ -67,17 +68,12 @@ export default function Header({ isModal, setIsModal }:Propss) {
 					<h1 className="section-header-content__title">Unlimited movies, TV shows, and more.</h1>
 					<div className="section-header-content__subtitle">Watch anywhere. Cancel anytime.</div>
 					<div className="section-header-content__text">Ready to watch? Enter your email to create or restart your membership.</div>
-					<form action="">
-						<div className="section-header-content__form">
-							<div className="section-header-content__form-input">
-								<input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email adress" />
-							</div>
-							<div className="section-header-content__form-button">
-								<button type="button">Get started</button>
-							</div>
-						</div>
-					</form>
-				</div>
+          <div className="section-header-content__form-button">
+            <NavLink to="/search">
+              <button type="button">Go to searching movies</button>
+            </NavLink>
+          </div>
+        </div>
 			</header>
 		</>
 		: <ModalLoginWindow>

@@ -7,7 +7,7 @@ import SectionCardText from '../../components/SectionCard/SectionCardText';
 import SectionCardVideo from '../../components/SectionCard/SectionCardVideo';
 import SectionFAQ from '../../components/SectionFAQ';
 
-export default function App() {
+export default function LendingPage() {
   const sectionCard = [
     {
       id:1,
