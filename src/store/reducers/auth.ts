@@ -18,7 +18,7 @@ export const authReducer = (state = initialState , action: AuthAction) => {
     case AuthActionTypes.AUTH_ERROR:
       return { ...state, error: action.payload };
     case AuthActionTypes.AUTH_LOGOUT:
-      localStorage.clear();
+      localStorage.removeItem('profile');
       return { ...state };
     default:
       return state;

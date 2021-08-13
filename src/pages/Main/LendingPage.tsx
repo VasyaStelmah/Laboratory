@@ -16,14 +16,14 @@ export default function LendingPage() {
         {!isModal
           ? <>
               {
-                sectionCard.map((obj)=>{
+                sectionCard.map((obj, index)=>{
                   return (
-                    obj.id%2===0 
-                    ? <SectionCard key={obj.id}>
+                    index%2===0 
+                    ? <SectionCard key={obj.title}>
                         <SectionCardText title={obj.title} subtitle={obj.subtitle} />
                         <SectionCardVideo alt={obj.alt} src={obj.src} />
                       </SectionCard>
-                    : <SectionCard key={obj.id}>
+                    : <SectionCard key={obj.title}>
                         <SectionCardVideo alt={obj.alt} src={obj.src} />
                         <SectionCardText title={obj.title} subtitle={obj.subtitle} />
                       </SectionCard>
