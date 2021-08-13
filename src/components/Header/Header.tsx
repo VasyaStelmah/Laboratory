@@ -6,11 +6,11 @@ import Footer from '../Footer/Footer';
 import { useActions } from "../../hooks/useActions";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 
-type Props={
+type Propss={
 	isModal:boolean,
 	setIsModal:React.Dispatch<React.SetStateAction<boolean>>
 };
-export default function Header({ isModal, setIsModal }:Props) {
+export default function Header({ isModal, setIsModal }:Propss) {
   const { user, loading, error } = useTypedSelector(state => state.auth);
   const { signin, signup } = useActions();
 
