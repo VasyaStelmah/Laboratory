@@ -9,7 +9,7 @@ export default function SectionFAQ() {
         <ul className="faq-question__button">
           {linkText.map((item)=>{
             return (
-              <a href="#section" key={item.id}>
+              <a href="#sections" key={item.id}>
                 <h2>{item.text}</h2>
               </a>
             );

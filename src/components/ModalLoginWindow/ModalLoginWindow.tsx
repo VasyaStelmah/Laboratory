@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
-type Props = {
+type Propss = {
   children: React.ReactNode,
 };
-export default function ModalLoginWindow({ children }:Props) {
+export default function ModalLoginWindow({ children }:Propss) {
 	const el: HTMLDivElement  = document.createElement('div');
 	useEffect(() => {
 		document.body.appendChild(el);

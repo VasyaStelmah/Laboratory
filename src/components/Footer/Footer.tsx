@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 import './footer.scss';
 import { content } from "./content";
 
-type Props = {
+type Propss = {
     isModal:boolean,
   };
-export default function Footer({ isModal }:Props) {
+export default function Footer({ isModal }:Propss) {
 	return (
 		<footer className={!isModal ? "footer-outer" : "footer - outer__modal"}>
 			<div className="footer-inner">

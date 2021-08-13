@@ -1,10 +1,10 @@
 import './SectionCardText.scss';
 
-type Props = {
+type Propss = {
   title:string,
   subtitle:string
 };
-export default function SectionCardText({ title,subtitle }:Props) {
+export default function SectionCardText({ title,subtitle }:Propss) {
 	  return (
         <div className="section-card__text">
           <div className="section-card__text-title">{title}</div>

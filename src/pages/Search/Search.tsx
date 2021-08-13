@@ -4,8 +4,8 @@ export default function Search() {
  
   return (
     <>
-    <NavLink to="/">Main</NavLink>
-    <div>Search</div>
+      <NavLink to="/">Main</NavLink>
+      <div>Search</div>
     </>
   );
 };

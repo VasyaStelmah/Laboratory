@@ -7,7 +7,6 @@
   import search from './pages/Search';
   import placeholder from './pages/Placeholder';
 
-
  function App() {
       return (
         <Switch>
