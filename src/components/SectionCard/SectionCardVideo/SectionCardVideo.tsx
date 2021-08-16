@@ -5,9 +5,9 @@ type Propss = {
   src:string,
 };
 export default function SectionCardVideo({ alt,src }:Propss) {
-	  return (
-      <div className="section-card__video">
-        <img alt={alt} src={src}/>
-      </div>
-		);
+  return (
+    <div className="section-card__video">
+      <img alt={alt} src={src}/>
+    </div>
+  );
 }
