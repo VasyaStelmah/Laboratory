@@ -15,13 +15,15 @@ export default function SectionFAQ() {
             );
           })}
         </ul>
-        <h2 className="faq-question-subtitle">Ready to watch? Enter your email to create or restart your membership.</h2>
+        <h2 className="faq-question-subtitle">
+          Ready to watch? Enter your email to create or restart your membership.
+        </h2>
         <div className="faq-question__form">
           <div className="faq-question__form-input">
             <input type="text" placeholder="Email adress" />
           </div>
           <div className="faq-question__form-button">
-            <button type='button'>Get started</button>
+            <button type="button">Get started</button>
           </div>
         </div>
       </div>

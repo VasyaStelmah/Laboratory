@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-shadow
 export enum AuthActionTypes {
-  AUTH_FETCH = "AUTH_FETCH",
-  AUTH_SUCCESS = "AUTH_SUCCESS",
-  AUTH_ERROR = "AUTH_ERROR",
-  AUTH_LOGOUT = "AUTH_LOGOUT",
+  AUTH_FETCH = 'AUTH_FETCH',
+  AUTH_SUCCESS = 'AUTH_SUCCESS',
+  AUTH_ERROR = 'AUTH_ERROR',
+  AUTH_LOGOUT = 'AUTH_LOGOUT',
 }
 export interface AuthState {
   user: null | string;

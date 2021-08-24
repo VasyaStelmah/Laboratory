@@ -1,3 +1,3 @@
-import PlaceholderPage from "./placeholderPage";
+import PlaceholderPage from './placeholderPage';
 
 export default PlaceholderPage;

@@ -1,3 +1,3 @@
-import SectionFAQ from "./SectionFAQ";
+import SectionFAQ from './SectionFAQ';
 
 export default SectionFAQ;

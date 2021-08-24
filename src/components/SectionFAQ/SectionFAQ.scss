@@ -8,7 +8,7 @@
   align-items: center;
   text-align: center;
 }
-.faq-question{
+.faq-question {
   &__text-title {
     font-weight: 700;
     font-size: 3rem;
@@ -74,7 +74,7 @@
 }
 @media (max-width: 460px) {
   button:hover {
-    cursor: pointer
+    cursor: pointer;
   }
   .faq-question-outer {
     border-top: 0.6rem solid #2e2e2e;
@@ -84,7 +84,7 @@
     align-items: center;
     text-align: center;
   }
-  .faq-question{
+  .faq-question {
     &__text-title {
       font-weight: 700;
       font-size: 2rem;
@@ -102,7 +102,7 @@
       text-align: center;
       button {
         width: 50%;
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 400;
         margin: 0;
         padding: 4px 4px;

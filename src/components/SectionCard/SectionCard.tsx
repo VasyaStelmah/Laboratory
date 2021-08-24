@@ -1,14 +1,12 @@
 import './SectionCard.scss';
 
 type Propss = {
-  children: React.ReactNode,
+  children: React.ReactNode;
 };
-export default function SectionCard({ children }:Propss) {
+export default function SectionCard({ children }: Propss) {
   return (
     <section className="section-card-outer">
-      <div className="section-card-inner">
-        {children}
-      </div>
+      <div className="section-card-inner">{children}</div>
     </section>
   );
 }

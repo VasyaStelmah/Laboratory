@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 type Propss = {
-  children: React.ReactNode,
+  children: React.ReactNode;
 };
 export default function ModalLoginWindow({ children }: Propss) {
   const el: HTMLDivElement = document.createElement('div');
@@ -12,7 +12,5 @@ export default function ModalLoginWindow({ children }: Propss) {
       document.body.removeChild(el);
     };
   });
-  return (
-    ReactDOM.createPortal(children, el)
-  );
+  return ReactDOM.createPortal(children, el);
 }
