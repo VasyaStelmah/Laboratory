@@ -1,3 +1,4 @@
+import React from 'react';
 import './SectionFAQ.scss';
 
 const linkText = [
@@ -11,12 +12,12 @@ const linkText = [
 ];
 
 export default function SectionFAQ() {
-	return (
+  return (
     <section className="faq-question-outer">
       <div className="faq-question-inner">
         <div className="faq-question__text-title">Frequently Asked Questions</div>
         <ul className="faq-question__button">
-          {linkText.map((item,index)=>{
+          {linkText.map((item, index) => {
             return (
               <a href="#section" key={index}>
                 <h2>{item}</h2>
@@ -35,5 +36,5 @@ export default function SectionFAQ() {
         </div>
       </div>
     </section>
-	);
+  );
 }
