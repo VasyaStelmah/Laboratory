@@ -4,6 +4,7 @@ type Propss = {
   title: string;
   subtitle: string;
 };
+
 export default function SectionCardText({ title, subtitle }: Propss) {
   return (
     <div className="section-card__text">

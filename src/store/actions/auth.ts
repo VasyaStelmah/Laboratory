@@ -12,8 +12,6 @@ export const signin = (email: string, password: string) => async (dispatch: Disp
       },
     });
     const json = await response.json();
-    // eslint-disable-next-line no-console
-    console.log(json);
     dispatch({ type: AuthActionTypes.AUTH_SUCCESS, payload: JSON.stringify(json) });
   } catch (error) {
     dispatch({ type: AuthActionTypes.AUTH_ERROR, payload: error });
@@ -30,8 +28,6 @@ export const signup = (email: string, password: string) => async (dispatch: Disp
       },
     });
     const json = await response.json();
-    // eslint-disable-next-line no-console
-    console.log(json);
     dispatch({ type: AuthActionTypes.AUTH_SUCCESS, payload: JSON.stringify(json) });
   } catch (error) {
     dispatch({ type: AuthActionTypes.AUTH_ERROR, payload: error });

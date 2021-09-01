@@ -5,9 +5,10 @@ import { content } from './content';
 type Props = {
   isModal: boolean;
 };
+
 export default function Footer({ isModal }: Props) {
   return (
-    <footer className={!isModal ? 'footer-outer' : 'footer - outer__modal'}>
+    <footer className={!isModal ? 'footer-outer' : 'footer-outer__modal'}>
       <div className="footer-inner">
         <div className="footer-text">Questions? Contact us.</div>
         <ul className="footer-cols">

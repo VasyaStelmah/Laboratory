@@ -40,6 +40,7 @@ export default function Header({ isModal, setIsModal }: Props) {
   const handleSetPass = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setPassword(passwordRef.current!.value);
   };
+
   useEffect(() => {
     // eslint-disable-next-line no-empty
     if (typeof emailRef.current === 'undefined' || emailRef.current === null) {
@@ -47,6 +48,7 @@ export default function Header({ isModal, setIsModal }: Props) {
       emailRef.current!.focus();
     }
   }, [email, setEmail]);
+
   useEffect(() => {
     // eslint-disable-next-line no-empty
     if (typeof passwordRef.current === 'undefined' || passwordRef.current === null) {
@@ -54,6 +56,7 @@ export default function Header({ isModal, setIsModal }: Props) {
       passwordRef.current!.focus();
     }
   }, [password, setPassword]);
+
   return !isModal ? (
     <>
       <header className="section-header">
