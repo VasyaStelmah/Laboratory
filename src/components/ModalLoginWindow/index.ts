@@ -1,3 +1,3 @@
-import ModalLoginWindow from "./ModalLoginWindow";
+import ModalLoginWindow from './ModalLoginWindow';
 
 export default ModalLoginWindow;

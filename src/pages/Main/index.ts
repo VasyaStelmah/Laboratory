@@ -1,3 +1,3 @@
-import LendingPage from "./LendingPage";
+import LendingPage from './LendingPage';
 
 export default LendingPage;

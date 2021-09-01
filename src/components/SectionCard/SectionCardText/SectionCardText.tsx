@@ -2,8 +2,8 @@ import React from 'react';
 import './SectionCardText.scss';
 
 type Props = {
-  title: string,
-  subtitle: string
+  title: string;
+  subtitle: string;
 };
 export default function SectionCardText({ title, subtitle }: Props) {
   return (

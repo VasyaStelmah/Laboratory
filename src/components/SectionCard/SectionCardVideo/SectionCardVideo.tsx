@@ -2,8 +2,8 @@ import React from 'react';
 import './SectionCardVideo.scss';
 
 type Props = {
-  alt: string,
-  src: string,
+  alt: string;
+  src: string;
 };
 export default function SectionCardVideo({ alt, src }: Props) {
   return (

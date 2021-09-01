@@ -1,3 +1,3 @@
-import SectionCardText from "./SectionCardText";
+import SectionCardText from './SectionCardText';
 
 export default SectionCardText;
