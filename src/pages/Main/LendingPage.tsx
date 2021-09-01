@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import './LendingPage.scss';
 import Header from '../../components/Header';

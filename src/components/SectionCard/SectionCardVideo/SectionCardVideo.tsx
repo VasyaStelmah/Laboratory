@@ -1,10 +1,11 @@
+import React from 'react';
 import './SectionCardVideo.scss';
 
-type Propss = {
+type Props = {
   alt: string;
   src: string;
 };
-export default function SectionCardVideo({ alt, src }: Propss) {
+export default function SectionCardVideo({ alt, src }: Props) {
   return (
     <div className="section-card__video">
       <img alt={alt} src={src} />

@@ -1,3 +1,4 @@
+import React from 'react';
 import './SectionFAQ.scss';
 import { linkText } from './content';
 
@@ -7,7 +8,7 @@ export default function SectionFAQ() {
       <div className="faq-question-inner">
         <div className="faq-question__text-title">Frequently Asked Questions</div>
         <ul className="faq-question__button">
-          {linkText.map((item) => {
+          {linkText.map((item, index) => {
             return (
               <a href="#sections" key={item.id}>
                 <h2>{item.text}</h2>
