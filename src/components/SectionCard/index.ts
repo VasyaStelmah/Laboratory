@@ -1,3 +1,3 @@
-import SectionCard from "./SectionCard";
+import SectionCard from './SectionCard';
 
 export default SectionCard;

@@ -1,3 +1,3 @@
-import SectionCardVideo from "./SectionCardVideo";
+import SectionCardVideo from './SectionCardVideo';
 
 export default SectionCardVideo;

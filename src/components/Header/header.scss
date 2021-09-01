@@ -1,19 +1,17 @@
 // HEADER
-.section-header
-.section-header-top {
+.section-header .section-header-top {
   z-index: 2;
   height: 90px;
 }
-.section-header-top__right-lang 
-.lang-footer 
-.section-header-top__right-lang {
+.section-header-top__right-lang .lang-footer .section-header-top__right-lang {
   z-index: 2;
   align-self: center;
 }
-.section-header{
+.section-header {
   width: 100%;
   height: 100vh;
-  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/a5a7610f-d18d-4971-90c1-a4b3d85b3d7a/BY-en-20210607-popsignuptwoweeks-perspective_alpha_website_small.jpg') no-repeat center center/cover;
+  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/a5a7610f-d18d-4971-90c1-a4b3d85b3d7a/BY-en-20210607-popsignuptwoweeks-perspective_alpha_website_small.jpg')
+    no-repeat center center/cover;
   &::before {
     z-index: 0;
     content: '';
@@ -25,7 +23,7 @@
     left: 0;
     background-color: rgba(20, 39, 41, 0.6);
   }
-  &-top{
+  &-top {
     img {
       width: 170px;
       top: 50%;
@@ -33,10 +31,10 @@
       transform: translate(24%, 94%);
       margin-left: 0;
     }
-    &__right{
+    &__right {
       display: flex;
       justify-content: flex-end;
-      &-lang{
+      &-lang {
         select {
           position: relative;
           z-index: 10;
@@ -44,16 +42,16 @@
           color: white;
           font-size: 1rem;
           margin-right: 2rem;
-          padding: .5rem;
+          padding: 0.5rem;
         }
       }
-      &-signin{
+      &-signin {
         z-index: 2;
         align-self: center;
-        button{
+        button {
           z-index: 2;
           font-size: 1rem;
-          padding: .5rem;
+          padding: 0.5rem;
           margin-right: 2rem;
           border: none;
           background: red;
@@ -68,7 +66,7 @@
       }
     }
   }
-  &-content{
+  &-content {
     position: relative;
     z-index: 2;
     width: 65%;
@@ -79,30 +77,30 @@
     align-items: center;
     text-align: center;
     margin-top: 9rem;
-    &__title{
+    &__title {
       font-weight: 700;
       font-size: 3rem;
       line-height: 1.1;
       margin: 0 0 2rem;
     }
-    &__subtitle{
+    &__subtitle {
       color: #fff;
       font-weight: 400;
       font-size: 1.5rem;
       line-height: 1.25;
       margin: 0 0 2rem;
     }
-    &__text{
+    &__text {
       color: #fff;
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 1.25;
       margin: 0 0 2rem;
     }
-    &__form{
+    &__form {
       display: flex;
-      &-input{
-        input{
+      &-input {
+        input {
           border: none;
           background: white;
           color: white;
@@ -117,8 +115,8 @@
           padding-left: 2rem;
         }
       }
-      &-button{
-        button{
+      &-button {
+        button {
           font-size: 1.625rem;
           font-weight: 400;
           height: 100%;
@@ -135,7 +133,7 @@
   }
 }
 // MODAL
-.modal{
+.modal {
   top: 0;
   position: relative;
   z-index: 2;
@@ -159,11 +157,11 @@
     background-color: black;
     opacity: 50%;
   }
-  &__form{
+  &__form {
     position: relative;
     z-index: 3;
-    &-input{ 
-      input{
+    &-input {
+      input {
         border: none;
         background: rgb(255, 255, 255);
         color: rgb(131, 131, 131);
@@ -178,7 +176,7 @@
         text-align: justify;
       }
     }
-    &-button{
+    &-button {
       font-size: 1rem;
       font-weight: 400;
       height: 20%;
@@ -191,9 +189,9 @@
       outline: none;
       border-radius: 4px;
       color: white;
-    } 
+    }
   }
-  &__title{
+  &__title {
     position: relative;
     z-index: 2;
     padding: 20px;
@@ -201,10 +199,10 @@
     font-size: 2.5rem;
     line-height: 1.1;
     padding-bottom: 24px;
-    &-text{
+    &-text {
       padding-right: 166px;
     }
-    &-button{
+    &-button {
       font-size: 1.625rem;
       font-weight: 400;
       height: 60px;
@@ -222,14 +220,15 @@
   .section-header {
     width: 100%;
     height: 100vh;
-    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/a5a7610f-d18d-4971-90c1-a4b3d85b3d7a/BY-en-20210607-popsignuptwoweeks-perspective_alpha_website_small.jpg') no-repeat center center/cover;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/a5a7610f-d18d-4971-90c1-a4b3d85b3d7a/BY-en-20210607-popsignuptwoweeks-perspective_alpha_website_small.jpg')
+      no-repeat center center/cover;
     &::after {
       background: rgba(0, 0, 0, 0.6);
       box-shadow: inset 80px 80px 150px #000000, inset -80px -80px 150px #000000;
     }
     &-top {
       z-index: 2;
-       img {
+      img {
         width: 114px;
         top: 29%;
         left: 20%;
@@ -241,8 +240,8 @@
         z-index: 2;
         background: none;
         color: white;
-        font-size: .8rem;
-        padding: .5rem;
+        font-size: 0.8rem;
+        padding: 0.5rem;
       }
     }
     &-content {
@@ -252,7 +251,7 @@
         line-height: 1;
       }
       &__subtitle {
-        font-size: .7rem;
+        font-size: 0.7rem;
       }
       &__text {
         color: #fff;
@@ -263,7 +262,7 @@
       }
       &__form {
         display: block;
-        &-input{ 
+        &-input {
           input {
             border: none;
             background: white;
@@ -279,19 +278,19 @@
             padding-left: 2rem;
           }
         }
-        &-button{
-            font-size: 1rem;
-            font-weight: 400;
-            height: 40%;
-            margin: 0;
-            margin-top: 1rem;
-            padding: 4px 4px;
-            border: none;
-            background: red;
-            outline: none;
-            border-radius: 4px;
-            color: white;
-        } 
+        &-button {
+          font-size: 1rem;
+          font-weight: 400;
+          height: 40%;
+          margin: 0;
+          margin-top: 1rem;
+          padding: 4px 4px;
+          border: none;
+          background: red;
+          outline: none;
+          border-radius: 4px;
+          color: white;
+        }
       }
     }
   }
