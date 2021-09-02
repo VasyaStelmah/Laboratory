@@ -1,37 +1,38 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
+import { content, locale } from './content';
+import { ToggleLanguage } from '../ToggleLanguage'
+
 import './footer.scss';
-import { content } from './content';
+
+const {
+  titleFooterSection,
+  productTitle,
+} = locale;
 
 type Props = {
   isModal: boolean;
 };
 
 export default function Footer({ isModal }: Props) {
+  const classNameWrap = !isModal ? 'footer-outer' : 'footer-outer__modal';
+
   return (
-    <footer className={!isModal ? 'footer-outer' : 'footer-outer__modal'}>
+    <footer className={classNameWrap}>
       <div className="footer-inner">
-        <div className="footer-text">Questions? Contact us.</div>
+        <div className="footer-text">{titleFooterSection}</div>
         <ul className="footer-cols">
-          {content.map((obj) => {
-            return (
-              <li key={obj.id}>
-                <NavLink to={obj.link}>{obj.text}</NavLink>
-              </li>
-            );
-          })}
+          {content.map((obj) => (
+            <li key={obj.id}>
+              <NavLink to={obj.link}>{obj.text}</NavLink>
+            </li>
+          ))}
         </ul>
         <div className="section-header__right-lang lang-footer">
-          <select>
-            <option value="/by/" lang="en">
-              English
-            </option>
-            <option value="/by-ru/" lang="ru">
-              Русский
-            </option>
-          </select>
+          <ToggleLanguage />
         </div>
-        <div className="footer-text">Netflix Belarus</div>
+        <div className="footer-text">{productTitle}</div>
       </div>
     </footer>
   );

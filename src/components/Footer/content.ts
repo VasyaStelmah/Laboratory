@@ -14,3 +14,8 @@ export const content = [
   { id: 13, text: 'Terms of Use', link: '/placeholderpage' },
   { id: 14, text: 'Contact Us', link: '/placeholderpage' },
 ];
+
+export const locale = {
+  titleFooterSection: 'Questions? Contact us.',
+  productTitle: 'Netflix Belarus',
+}
