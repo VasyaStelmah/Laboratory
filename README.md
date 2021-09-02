@@ -1,4 +1,4 @@
-Netflix Laboratory Project
+# Netflix Laboratory Project
 ## npm i 
 **Эта команда устанавливает пакет и все пакеты, от которых он зависит.**
 ## npm run dev-client
