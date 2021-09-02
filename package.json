@@ -9,11 +9,10 @@
     "prod-client": "cross-env NODE_ENV=production webpack --mode production --env env=client",
     "dev-backend": "cross-env NODE_ENV=development webpack --mode development --env env=server",
     "prod-backend": "cross-env NODE_ENV=production webpack --mode production --env env=server",
-    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
     "client-server": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --env env=client",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run prod-client",
     "backend-server": "nodemon ./server/server.js",
-    "predeploy": "npm run build",
     "format-client": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "format-backend": "prettier --write \"./server/**/*.{js,jsx,ts,tsx,json,md}\"",
     "lint:fix": "eslint src/**/*.{js,jsx,ts,tsx} --fix"

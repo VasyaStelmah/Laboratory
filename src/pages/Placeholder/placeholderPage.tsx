@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 export default function PlaceholderPage() {
   return (
     <>
-      <NavLink to="/">Main</NavLink>
-      <div>PlaceholderPage</div>
+      <h2><NavLink to="/">Main</NavLink></h2>
+      <h2>PlaceholderPage</h2>
     </>
   );
 }

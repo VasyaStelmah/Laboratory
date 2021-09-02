@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 export default function Search() {
   return (
     <>
-      <NavLink to="/">Main</NavLink>
-      <div>Search</div>
+      <h2><NavLink to="/">Main</NavLink></h2>
+      <h2 >Search</h2>
     </>
   );
 }
